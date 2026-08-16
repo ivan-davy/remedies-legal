@@ -1,0 +1,415 @@
+/*
+  Remedies — the legal site's stylesheet.
+
+  These pages are usually reached from inside the app (Settings → Legal opens
+  them in Safari), so they are styled as the app's own dark amber theme rather
+  than as a separate website. Every colour below is a token from
+  `buildTheme('dark', 'amber')`, copied by value.
+
+  Copied by value, and therefore able to drift — so it does not depend on anyone
+  remembering: `apps/mobile/__tests__/legalSiteTheme.test.ts` reads the token
+  block below and fails if any value stops matching the app.
+
+  No web fonts, by decision. A privacy policy that fetches a font from Google
+  hands the reader's IP address to Google on the very page promising that
+  nothing is collected, which is a contradiction no wording survives. The stacks
+  below name the app's own faces first — anyone who has them gets the exact
+  thing — and fall back to what the system already has.
+*/
+
+/* THEME TOKENS — START (locked by legalSiteTheme.test.ts) */
+:root {
+  color-scheme: dark;
+
+  --backdrop: #0F0E0B;         /* theme.backdrop — the page tone behind every screen */
+  --backdrop-deep: #070605;    /* theme.backdropDeep — the floor; here, the overscroll area */
+  --card: #1A1713;             /* theme.neutral[900] — a raised surface */
+
+  --text-primary: #FDFAF5;     /* theme.text.primary — headings and emphasis */
+  --text-strong: #EAE3D5;      /* theme.text.strong — section headings */
+  --text-secondary: #D4C9B5;   /* theme.text.secondary — body prose */
+  --text-muted: #A89880;       /* theme.text.muted — meta lines, the footer */
+
+  --accent: #F4AE51;           /* theme.accentText — amber[300]; the 4.5:1 stop, so links may use it */
+  --accent-soft: #F9D9A0;      /* theme.accentSoft — hover, and emphasis inside a quote */
+
+  --surface-subtle: rgba(212,201,181,0.05);  /* theme.surface.subtle */
+  --surface-base: rgba(212,201,181,0.06);    /* theme.surface.base */
+  --surface-raised: rgba(212,201,181,0.08);  /* theme.surface.raised */
+
+  --glass-fill: rgba(212,201,181,0.15);      /* theme.glass.fill — the sticky bar */
+  --glass-border: rgba(212,201,181,0.18);    /* theme.glass.border — every hairline */
+
+  /* theme.ambient.color (amber[400] #C66A00) split into components, because the
+     wash needs it at eight different alphas and `rgba(var(--glow), a)` works
+     everywhere, while `rgb(from …)` does not. amber[400] is a FILL tone: it is
+     3.4:1 and must never be used for text. */
+  --glow: 198,106,0;
+}
+/* THEME TOKENS — END */
+
+:root {
+  /* Radii from `constants/radii.ts`. Do not invent values between these. */
+  --radius-card: 16px;
+  --radius-chip: 12px;
+
+  --serif: "Libertinus Serif", "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua",
+    Georgia, serif;
+  --sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* The floor. `.ambient` is fixed to the viewport, so this is what shows
+     through iOS rubber-band overscroll — the deeper tone, as in the app's
+     drawer, rather than a white flash. */
+  background: var(--backdrop-deep);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  /* No background here on purpose. A negative-z-index layer paints above the
+     ROOT element's background but below every in-flow block background, so a
+     background on `body` hides `.ambient` completely — which is exactly what
+     happened the first time. The page tone is painted by `.ambient` instead. */
+  color: var(--text-secondary);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+/* ---------------------------------------------------------------- ambient -- */
+
+/*
+  The app's ambient glow, in CSS. Same construction as `AmbientBackground.tsx`:
+  two amber blobs whose centres sit ABOVE the viewport so only their soft edge
+  reaches the screen, plus one centred glow just below the bottom edge. The stop
+  profiles are the app's values, unchanged.
+
+  Fixed rather than scrolled, because in the app the wash belongs to the screen
+  and not to the content moving over it.
+*/
+.ambient {
+  position: fixed;
+  /* Oversized by more than the drift below travels, so the moving layer can
+     never slide its own edge into view — the app does the same thing with a 2×
+     SVG. */
+  inset: -4%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    /* top-left blob — app: cx 10%, cy -10%, r 1.3W */
+    radial-gradient(
+      circle min(130vw, 1100px) at 10% -10%,
+      rgba(var(--glow), 0.55) 0%,
+      rgba(var(--glow), 0.36) 12%,
+      rgba(var(--glow), 0.16) 30%,
+      rgba(var(--glow), 0.02) 60%,
+      rgba(var(--glow), 0) 100%
+    ),
+    /* top-right blob — the pair reads as one wash across the top */
+    radial-gradient(
+      circle min(130vw, 1100px) at 90% -10%,
+      rgba(var(--glow), 0.55) 0%,
+      rgba(var(--glow), 0.36) 12%,
+      rgba(var(--glow), 0.16) 30%,
+      rgba(var(--glow), 0.02) 60%,
+      rgba(var(--glow), 0) 100%
+    ),
+    /* bottom glow — centred, anchored just below the edge */
+    radial-gradient(
+      circle 102vh at 50% 108%,
+      rgba(var(--glow), 0.34) 0%,
+      rgba(var(--glow), 0.19) 8%,
+      rgba(var(--glow), 0.06) 18%,
+      rgba(var(--glow), 0.011) 35%,
+      rgba(var(--glow), 0) 100%
+    ),
+    /* …and the page tone underneath all three, so this one layer is the whole
+       backdrop — the same thing `AmbientBackground` sits on in the app. */
+    var(--backdrop);
+}
+
+/*
+  A nod to the app's drift, not a reproduction of it: one slow loop instead of
+  seven, and a fraction of the travel. This is a page people read, and a glow
+  that moves enough to notice would be a nuisance rather than atmosphere.
+*/
+@media (prefers-reduced-motion: no-preference) {
+  .ambient {
+    animation: ambient-drift 32s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes ambient-drift {
+  from {
+    transform: translate3d(-1.5%, 0, 0);
+  }
+  to {
+    transform: translate3d(1.5%, -0.6%, 0);
+  }
+}
+
+/* ------------------------------------------------------------------- nav -- */
+
+/*
+  Glass, and deliberately translucent: the app's rule is that content passing
+  under a pinned bar must dissolve into it rather than be sliced by an opaque
+  band. Same treatment here.
+*/
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 20px;
+  padding: 12px 20px;
+  background: var(--glass-fill);
+  border-bottom: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: saturate(140%) blur(20px);
+  backdrop-filter: saturate(140%) blur(20px);
+}
+
+.topbar .brand {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.topbar nav {
+  display: flex;
+  gap: 18px;
+  font-size: 15px;
+}
+
+.topbar nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.topbar nav a:hover {
+  color: var(--text-primary);
+}
+
+.topbar nav a[aria-current="page"] {
+  color: var(--accent);
+}
+
+/* ------------------------------------------------------------------ page -- */
+
+.page {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 40px 20px 72px;
+}
+
+.page > :first-child {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--serif);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-strong);
+}
+
+h1 {
+  /* The app's `ScreenTitle` is serif 30. This grows a little on a wide window
+     and never below the app's size on a phone. */
+  font-size: clamp(30px, 6vw, 38px);
+  color: var(--text-primary);
+  margin: 8px 0 24px;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 25px;
+  margin: 48px 0 12px;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 32px 0 8px;
+}
+
+p,
+ul,
+ol {
+  margin: 0 0 16px;
+}
+
+strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+a {
+  color: var(--accent);
+  /* Underlined in prose on purpose: colour alone is not an accessible way to
+     mark a link (WCAG 1.4.1), and this is a document where following the right
+     reference matters. The nav opts out because position identifies it. */
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(244, 174, 81, 0.45);
+}
+
+a:hover {
+  color: var(--accent-soft);
+  text-decoration-color: currentColor;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+ul,
+ol {
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+li::marker {
+  color: var(--text-muted);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--glass-border);
+  margin: 32px 0;
+}
+
+blockquote {
+  /* The draft banner `publish-legal.py` injects renders as a blockquote, and
+     its entire job is to be impossible to miss — hence the accent rule. */
+  margin: 24px 0;
+  padding: 14px 18px;
+  background: var(--surface-base);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-chip) var(--radius-chip) 0;
+  color: var(--text-secondary);
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+blockquote strong {
+  color: var(--accent-soft);
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 0.9em;
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: var(--surface-raised);
+  color: var(--text-primary);
+}
+
+/* ----------------------------------------------------------------- table -- */
+
+/* Wrapped in its own scroller so a wide table never makes the page itself
+   scroll sideways on a phone. */
+table {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 24px;
+  font-size: 15px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--glass-border);
+  vertical-align: top;
+}
+
+th {
+  background: var(--surface-base);
+  color: var(--text-primary);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+tbody tr:nth-child(even) {
+  background: var(--surface-subtle);
+}
+
+/* ------------------------------------------------------------- home page -- */
+
+/*
+  The landing page is the Support URL Apple requires, so its list of documents
+  is the one thing on it that has to be obvious. Cards, from the markdown's
+  plain list — the published files stay free of presentation.
+*/
+.home .page ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.home .page li {
+  margin: 0;
+}
+
+.home .page li a {
+  display: block;
+  padding: 16px 18px;
+  background: var(--card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-card);
+  color: var(--text-primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.home .page li a::after {
+  content: " →";
+  color: var(--accent);
+}
+
+.home .page li a:hover {
+  background: var(--surface-raised);
+  border-color: var(--accent);
+}
+
+/* ---------------------------------------------------------------- footer -- */
+
+.foot {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  border-top: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.foot p {
+  margin: 0 0 4px;
+}

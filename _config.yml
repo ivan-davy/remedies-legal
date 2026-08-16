@@ -1,3 +1,13 @@
 title: Remedies
 description: Legal documents for the Remedies iOS app
-theme: jekyll-theme-minimal
+
+# No `theme:` key on purpose.
+#
+# The site used `jekyll-theme-minimal`, whose stylesheet is a light page with a
+# blue sidebar — nothing like the app. Overriding it would have meant fighting
+# markup we do not own, so the site carries its own layout and stylesheet
+# instead. Four pages of prose need very little CSS, and owning it outright is
+# what lets the palette come straight from the app's dark amber theme.
+#
+# Source of truth for everything here is `docs/legal/site/` in the app
+# repository; this repo is a published artefact. See `publish-legal.py`.

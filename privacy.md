@@ -16,8 +16,8 @@ nav_order: 1
 
 **Remedies does not collect your data. There is no server to collect it to.**
 
-The app has no accounts, makes no network requests, and contains no analytics, advertising or crash-
-reporting services. Everything you enter stays on your iPhone, encrypted. I cannot see your
+The app has no accounts, makes no network requests, and contains no analytics, advertising or
+crash-reporting services. Everything you enter stays on your iPhone, encrypted. I cannot see your
 medicines, your notes, your photos or your reminders, and I could not hand them to anyone if I were
 asked, because they never reach me.
 

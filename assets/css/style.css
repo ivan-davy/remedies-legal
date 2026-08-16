@@ -267,7 +267,10 @@ a {
      reference matters. The nav opts out because position identifies it. */
   text-decoration: underline;
   text-underline-offset: 2px;
-  text-decoration-color: rgba(244, 174, 81, 0.45);
+  /* Derived from the token rather than written out, so a different accent
+     cannot leave the underline orange. A browser that cannot do `color-mix`
+     drops the line and underlines in `currentColor` — the same hue, heavier. */
+  text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
 }
 
 a:hover {

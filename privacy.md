@@ -4,10 +4,6 @@ title: Privacy Policy
 nav_order: 1
 ---
 
-> **Some details here are still to be filled in.** The page is published so the link
-> works. Everything it says about how the app handles your data is accurate; what is
-> missing is administrative.
-
 # Privacy Policy
 
 **Effective date:** 16 August 2026
@@ -32,7 +28,7 @@ The rest of this document explains that in the detail the law expects.
 Remedies is made by **Ivan Davydov**, an individual entrepreneur registered in Georgia. One person,
 no company.
 
-Contact: **imdavydov@outlook.com**, `[CITY]`, Georgia. A supervisory authority that needs my full
+Contact: **imdavydov@outlook.com**, Batumi, Georgia. A supervisory authority that needs my full
 registered address can have it on request.
 
 Because I do not process your personal data (see §3), I am not acting as a "data controller" for the

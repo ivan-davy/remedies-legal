@@ -4,15 +4,10 @@ title: Terms of Use
 nav_order: 2
 ---
 
-> **This document is not final.** It is published so the link works, but it still has
-> details to fill in and has not been through legal review. If you are reading it as a
-> user of Remedies, everything it says about how the app handles your data is accurate;
-> the gaps are administrative.
-
 # Terms of Use
 
-**Effective date:** `[DATE]`
-**Last updated:** `[DATE]`
+**Effective date:** 16 August 2026
+**Last updated:** 16 August 2026
 
 
 ---
@@ -20,7 +15,8 @@ nav_order: 2
 ## 1. What this is
 
 Remedies is an iPhone app for keeping track of the medicines in your home: what you have, how much is
-left, when it expires, and when to take it. It is made by `[LEGAL NAME / ENTITY]` ("we").
+left, when it expires, and when to take it. It is made by **Ivan Davydov**, an individual
+entrepreneur registered in Georgia ("I").
 
 By using the app you accept these terms. If you do not accept them, delete the app.
 
@@ -45,7 +41,7 @@ acknowledge it before you can use it.
 
 ## 3. Your content
 
-Everything you put into Remedies is yours. It stays on your device — we never receive it, so we
+Everything you put into Remedies is yours. It stays on your device — it never reaches me, so I
 neither claim nor could exercise any licence over it. You are responsible for what you enter and for
 checking it against the physical packaging.
 
@@ -55,11 +51,11 @@ Some features are part of a paid unlock called Remedies Plus.
 
 - It is a **one-time purchase**, not a subscription. There is nothing to cancel and nothing that
   renews.
-- The purchase is processed by **Apple** through the App Store, under Apple's terms. We do not handle
+- The purchase is processed by **Apple** through the App Store, under Apple's terms. I do not handle
   your payment details.
-- **Refunds are handled by Apple**, under Apple's refund policy. We cannot issue them.
+- **Refunds are handled by Apple**, under Apple's refund policy. I cannot issue them.
 - Restoring a purchase on a new device is always available and is never gated.
-- We may change what the free tier includes for **future** purchasers. What you have already bought
+- I may change what the free tier includes for **future** purchasers. What you have already bought
   stays bought.
 
 ## 5. Acceptable use
@@ -69,8 +65,8 @@ medical device or as a source of medical advice.
 
 ## 6. Availability
 
-The app runs entirely on your device, so it does not depend on a service we operate and cannot be
-"taken down". We may stop publishing updates, and a future version of iOS may stop supporting the
+The app runs entirely on your device, so it does not depend on a service I operate and cannot be
+"taken down". I may stop publishing updates, and a future version of iOS may stop supporting the
 app. Your data remains on your device and can be exported at any time (Settings → Data).
 
 ## 7. Warranties
@@ -83,7 +79,7 @@ anything else that cannot lawfully be excluded.
 
 ## 8. Liability
 
-Subject to §7, and to the fullest extent the law allows, we are not liable for indirect or
+Subject to §7, and to the fullest extent the law allows, I am not liable for indirect or
 consequential loss, or for loss arising from reliance on the app for a health decision — which §2
 asks you not to do.
 
@@ -93,14 +89,14 @@ They end when you delete the app.
 
 ## 10. Governing law
 
-These terms are governed by the law of `[JURISDICTION]`.
+These terms are governed by the law of **Georgia**.
 
 
 ## 11. Apple
 
 Apple is not a party to these terms and has no responsibility for the app. If the app fails to
 conform to any warranty, you may notify Apple and Apple may refund the purchase price; Apple has no
-other warranty obligation. Any claim relating to the app is our responsibility, not Apple's. Apple
+other warranty obligation. Any claim relating to the app is my responsibility, not Apple's. Apple
 and its subsidiaries are third-party beneficiaries of these terms and may enforce them against you.
 
 You confirm you are not located in a country subject to a U.S. Government embargo or designated as
@@ -109,7 +105,7 @@ parties.
 
 ## 12. Changes
 
-We may update these terms. The date at the top says when they last changed.
+I may update these terms. The date at the top says when they last changed.
 
 ## 13. Contact
 

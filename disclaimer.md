@@ -4,15 +4,10 @@ title: Medical Disclaimer
 nav_order: 3
 ---
 
-> **This document is not final.** It is published so the link works, but it still has
-> details to fill in and has not been through legal review. If you are reading it as a
-> user of Remedies, everything it says about how the app handles your data is accurate;
-> the gaps are administrative.
-
 # Medical Disclaimer
 
-**Effective date:** `[DATE]`
-**Last updated:** `[DATE]`
+**Effective date:** 16 August 2026
+**Last updated:** 16 August 2026
 
 > **This document is GENERATED from the app's own text** — `apps/mobile/locales/en.json`,
 > `legal.disclaimer.*` — which is the canonical wording. It is what the user acknowledges before

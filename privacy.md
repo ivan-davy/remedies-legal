@@ -4,15 +4,14 @@ title: Privacy Policy
 nav_order: 1
 ---
 
-> **This document is not final.** It is published so the link works, but it still has
-> details to fill in and has not been through legal review. If you are reading it as a
-> user of Remedies, everything it says about how the app handles your data is accurate;
-> the gaps are administrative.
+> **Some details here are still to be filled in.** The page is published so the link
+> works. Everything it says about how the app handles your data is accurate; what is
+> missing is administrative.
 
 # Privacy Policy
 
-**Effective date:** `[DATE]`
-**Last updated:** `[DATE]`
+**Effective date:** 16 August 2026
+**Last updated:** 16 August 2026
 
 
 ---
@@ -22,42 +21,44 @@ nav_order: 1
 **Remedies does not collect your data. There is no server to collect it to.**
 
 The app has no accounts, makes no network requests, and contains no analytics, advertising or crash-
-reporting services. Everything you enter stays on your iPhone, encrypted. We — the developer —
-cannot see your medicines, your notes, your photos or your reminders, and we could not hand them to
-anyone if we were asked, because we never receive them.
+reporting services. Everything you enter stays on your iPhone, encrypted. I cannot see your
+medicines, your notes, your photos or your reminders, and I could not hand them to anyone if I were
+asked, because they never reach me.
 
 The rest of this document explains that in the detail the law expects.
 
-## 1. Who we are
+## 1. Who I am
 
-Remedies is developed by `[LEGAL NAME / ENTITY]`, `[ADDRESS]`.
+Remedies is made by **Ivan Davydov**, an individual entrepreneur registered in Georgia. One person,
+no company.
 
-For anything about this policy, write to **imdavydov@outlook.com**.
+Contact: **imdavydov@outlook.com**, `[CITY]`, Georgia. A supervisory authority that needs my full
+registered address can have it on request.
 
-Because we do not process your personal data (see §3), we are not acting as a "data controller" for
-the medication information you keep in the app. We are the controller only for what you choose to
-send us directly — for example, the contents of a support email.
+Because I do not process your personal data (see §3), I am not acting as a "data controller" for the
+medication information you keep in the app. I am the controller only for what you choose to send me
+directly — for example, the contents of a support email.
 
 ## 2. What this policy covers
 
 The Remedies iOS app. It does not cover the App Store itself, which is Apple's service under Apple's
 privacy policy.
 
-## 3. What we collect
+## 3. What I collect
 
 **Nothing.**
 
 Specifically, the app does **not**:
 
 - create an account or ask for your name, email or phone number;
-- send any data over the network — there are no requests to us or to anyone else;
+- send any data over the network — there are no requests to me or to anyone else;
 - include analytics, attribution, advertising or crash-reporting SDKs;
 - track you across apps or websites, so it never asks for tracking permission;
 - read your contacts, location, health records, calendar or microphone.
 
 ## 4. What the app stores on your device
 
-All of it stays on your iPhone. None of it reaches us.
+All of it stays on your iPhone. None of it reaches me.
 
 | What | Where |
 | --- | --- |
@@ -68,7 +69,7 @@ All of it stays on your iPhone. None of it reaches us.
 | Language, theme and other preferences | Encrypted app storage |
 
 **Encryption.** The app encrypts this data with a key generated on your device and held in the iOS
-Keychain. The key never leaves your device and we never see it.
+Keychain. The key never leaves your device and I never see it.
 
 **iPhone backups.** If you back your iPhone up — to iCloud or to a computer — that backup includes
 the app's data. It is encrypted, and the key travels in the Keychain portion of the backup so that a
@@ -90,7 +91,7 @@ Photos taken or chosen this way are stored in the app's own encrypted storage. T
 
 Reading a package or a leaflet happens **entirely on your iPhone**, using Apple's on-device text
 recognition and on-device language model. The image and the text read from it never leave the device
-and are never sent to us or to any third party.
+and are never sent to me or to any third party.
 
 ## 7. Reminders
 
@@ -100,7 +101,7 @@ lock screen is up to you: by default it does **not** name the medicine.
 
 ## 8. Your data, and your rights
 
-Because everything is on your device and we hold nothing, you exercise most rights directly:
+Because everything is on your device and I hold nothing, you exercise most rights directly:
 
 - **Get a copy / take it elsewhere.** Settings → Data → *Export your data* writes your whole cabinet
   to a JSON file and hands it to the iOS share sheet. Where it goes from there is your choice.
@@ -108,17 +109,17 @@ Because everything is on your device and we hold nothing, you exercise most righ
 - **Correct it.** Edit any record in the app.
 
 If you are in the UK or EU, the GDPR also gives you the right to complain to your data protection
-authority, and to ask us for access, correction, erasure, restriction, objection and portability of
-data we hold about you. In practice that is limited to correspondence you have sent us, since we hold
+authority, and to ask me for access, correction, erasure, restriction, objection and portability of
+data I hold about you. In practice that is limited to correspondence you have sent me, since I hold
 nothing else.
 
 ## 9. Sharing
 
-We do not sell, rent or share your data, because we do not have it. There are no third-party
+I do not sell, rent or share your data, because I do not have it. There are no third-party
 processors, no advertisers and no analytics providers.
 
-If you buy Remedies Plus, the purchase is handled by **Apple**. Apple tells us that a purchase
-happened; we never receive your name, card or billing address. Apple's handling of that is covered by
+If you buy Remedies Plus, the purchase is handled by **Apple**. Apple tells me that a purchase
+happened; I never receive your name, card or billing address. Apple's handling of that is covered by
 Apple's privacy policy.
 
 ## 10. Children

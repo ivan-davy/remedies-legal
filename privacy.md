@@ -7,7 +7,7 @@ nav_order: 1
 # Privacy Policy
 
 **Effective date:** 16 August 2026
-**Last updated:** 16 August 2026
+**Last updated:** 21 August 2026
 
 
 ---
@@ -71,7 +71,7 @@ Keychain. The key never leaves your device and I never see it.
 the app's data. It is encrypted, and the key travels in the Keychain portion of the backup so that a
 restore keeps working. One exception is worth knowing: an **unencrypted** computer backup does not
 carry Keychain items to a *different* device, so restoring one onto new hardware would leave the data
-unreadable. Use an encrypted backup, or export your data (§7) before switching phones.
+unreadable. Use an encrypted backup, or export your data (§8) before switching phones.
 
 ## 5. Camera and photo library
 
@@ -99,8 +99,11 @@ lock screen is up to you: by default it does **not** name the medicine.
 
 Because everything is on your device and I hold nothing, you exercise most rights directly:
 
-- **Get a copy / take it elsewhere.** Settings → Data → *Export your data* writes your whole cabinet
-  to a JSON file and hands it to the iOS share sheet. Where it goes from there is your choice.
+- **Get a copy / take it elsewhere.** Settings → Data → *Download a dump* writes your whole cabinet
+  to a zip archive — the records as JSON, plus your packaging and leaflet photos — and hands it to
+  the iOS share sheet. So that any device can open it, the archive is **not** encrypted: treat it as
+  carefully as the data it holds, and keep it somewhere private. Where it goes is your choice; the
+  app sends it nowhere. The same screen can restore a dump, replacing what is in the app.
 - **Delete it.** Deleting the app removes its data from your iPhone. There is no copy anywhere else.
 - **Correct it.** Edit any record in the app.
 

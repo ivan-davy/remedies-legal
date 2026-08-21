@@ -7,7 +7,7 @@ nav_order: 3
 # Medical Disclaimer
 
 **Effective date:** 16 August 2026
-**Last updated:** 16 August 2026
+**Last updated:** 21 August 2026
 
 
 ---
@@ -41,7 +41,7 @@ In an emergency, call your local emergency number or go to the nearest hospital.
 
 - **Before first use** — a full-screen step that cannot be skipped or swiped away. Acknowledging it
   records which version was agreed to, and when.
-- **Any time afterwards** — Settings → Legal → Medical disclaimer, showing the same words.
+- **Any time afterwards** — About → Legal → Medical disclaimer, showing the same words.
 
 ## Contact
 

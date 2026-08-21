@@ -1,7 +1,7 @@
 /*
   Remedies — the legal site's stylesheet.
 
-  These pages are usually reached from inside the app (Settings → Legal opens
+  These pages are usually reached from inside the app (About → Legal opens
   them in Safari), so they are styled as the app's own dark amber theme rather
   than as a separate website. Every colour below is a token from
   `buildTheme('dark', 'amber')`, copied by value.

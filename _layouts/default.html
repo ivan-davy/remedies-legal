@@ -4,20 +4,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--
-      Both of these are load-bearing on a near-black page. `color-scheme` is what
-      makes Safari paint the scrollbar, the text-selection UI and any form
-      control dark; without it you get a light scrollbar down the side of a dark
-      document. `theme-color` tints Safari's toolbar to the backdrop, which
-      matters more here than on most sites: this page is usually opened from
-      inside the app (About → Legal), so the browser chrome is the seam
-      between the two.
+      Light and dark, following the system, as the landing page does.
+      `color-scheme` is what makes Safari paint the scrollbar, the text-selection
+      UI and any form control in the page's own mode. `theme-color` tints
+      Safari's toolbar to the page tone, which matters more here than on most
+      sites: this page is usually opened from inside the app (About → Legal) or
+      from the landing page's footer, so the browser chrome is the seam.
     -->
-    <meta name="color-scheme" content="dark" />
-    <meta name="theme-color" content="#0F0E0B" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#E5E3E0" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E0E0D" />
     <title>
       {%- if page.url == "/" -%}{{ page.title }}{%- else -%}{{ page.title }} · {{ site.title }}{%- endif -%}
     </title>
     <meta name="description" content="{{ site.description }}" />
+    <link rel="preload" href="{{ '/assets/fonts/Inter-Variable.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
   </head>
 
@@ -26,20 +27,24 @@
        documents are generated files; keeping presentation out of them is what
        lets them be regenerated without thought. -->
   <body class="{% if page.url == '/' %}home{% endif %}">
-    <!-- The app's ambient wash. Decorative and empty, so it is hidden from
-         assistive technology entirely. -->
-    <div class="ambient" aria-hidden="true"></div>
-
+    <!-- The landing page's floating glass bar: the heart and the wordmark, a
+         hairline, the documents. -->
     <header class="topbar">
-      <a class="brand" href="{{ '/' | relative_url }}">Remedies</a>
-      <nav aria-label="Legal documents">
-        <!-- `nav_order` comes from the front matter `publish-legal.py` writes,
-             so the current-page marker follows the same table that decides
-             which files exist. Nothing here has to be kept in step by hand. -->
-        <a href="{{ '/privacy' | relative_url }}"{% if page.nav_order == 1 %} aria-current="page"{% endif %}>Privacy</a>
-        <a href="{{ '/terms' | relative_url }}"{% if page.nav_order == 2 %} aria-current="page"{% endif %}>Terms</a>
-        <a href="{{ '/disclaimer' | relative_url }}"{% if page.nav_order == 3 %} aria-current="page"{% endif %}>Disclaimer</a>
-      </nav>
+      <div class="bar">
+        <a class="brand" href="{{ '/' | relative_url }}" aria-label="Remedies, legal documents">
+          <img src="{{ '/assets/images/heart-logo.png' | relative_url }}" width="22" height="20" alt="" aria-hidden="true" />
+          <span class="wordmark">Remedies</span>
+        </a>
+        <span class="rule" aria-hidden="true"></span>
+        <nav aria-label="Legal documents">
+          <!-- `nav_order` comes from the front matter `publish-legal.py` writes,
+               so the current-page marker follows the same table that decides
+               which files exist. Nothing here has to be kept in step by hand. -->
+          <a href="{{ '/privacy' | relative_url }}"{% if page.nav_order == 1 %} aria-current="page"{% endif %}>Privacy</a>
+          <a href="{{ '/terms' | relative_url }}"{% if page.nav_order == 2 %} aria-current="page"{% endif %}>Terms</a>
+          <a href="{{ '/disclaimer' | relative_url }}"{% if page.nav_order == 3 %} aria-current="page"{% endif %}>Disclaimer</a>
+        </nav>
+      </div>
     </header>
 
     <main class="page">
@@ -47,8 +52,10 @@
     </main>
 
     <footer class="foot">
-      <p>Remedies is an iPhone app. About&nbsp;→&nbsp;Legal opens these pages.</p>
-      <p><a href="mailto:imdavydov@outlook.com">imdavydov@outlook.com</a></p>
+      <div class="foot-inner">
+        <p>Remedies is an iPhone app. About&nbsp;→&nbsp;Legal opens these pages.</p>
+        <p><a href="mailto:imdavydov@outlook.com">imdavydov@outlook.com</a> · <a href="{{ '/assets/fonts/OFL.txt' | relative_url }}">Font licences</a></p>
+      </div>
     </footer>
   </body>
 </html>

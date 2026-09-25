@@ -1,50 +1,76 @@
 /*
   Remedies — the legal site's stylesheet.
 
-  These pages are usually reached from inside the app (About → Legal opens
-  them in Safari), so they are styled as the app's own dark amber theme rather
-  than as a separate website. Every colour below is a token from
-  `buildTheme('dark', 'amber')`, copied by value.
+  Styled as the landing page (`apps/web`) is, so that following a link from one
+  to the other reads as one site (owner, 2026-09-25: «чтобы при переключении
+  выглядело когерентно»): the app's amber theme in BOTH modes, following the
+  system; a flat page tone; the landing's floating glass bar with the heart and
+  the wordmark; Inter and Libertinus Serif. Nothing more — these are documents.
 
-  Copied by value, and therefore able to drift — so it does not depend on anyone
-  remembering: `apps/mobile/__tests__/legalSiteTheme.test.ts` reads the token
-  block below and fails if any value stops matching the app.
+  Every colour below is a token from `buildTheme(mode, 'amber')`, copied by
+  value, and therefore able to drift — so it does not depend on anyone
+  remembering: `apps/mobile/__tests__/legalSiteTheme.test.ts` reads both token
+  blocks and fails if any value stops matching the app.
 
-  No web fonts, by decision. A privacy policy that fetches a font from Google
-  hands the reader's IP address to Google on the very page promising that
-  nothing is collected, which is a contradiction no wording survives. The stacks
-  below name the app's own faces first — anyone who has them gets the exact
-  thing — and fall back to what the system already has.
+  The fonts are served from this site (`assets/fonts/`, the same files the
+  landing page ships, SIL OFL). Never from Google: a privacy policy that fetches
+  a font from Google hands the reader's IP address to Google on the very page
+  promising that nothing is collected.
 */
 
-/* THEME TOKENS — START (locked by legalSiteTheme.test.ts) */
+/* LIGHT THEME TOKENS — START (locked by legalSiteTheme.test.ts) */
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 
-  --backdrop: #0F0E0B;         /* theme.backdrop — the page tone behind every screen */
-  --backdrop-deep: #070605;    /* theme.backdropDeep — the floor; here, the overscroll area */
-  --card: #1A1713;             /* theme.neutral[900] — a raised surface */
+  --backdrop: #E5E3E0;         /* theme.backdrop — the page tone */
+  --backdrop-deep: #F2F0EE;    /* theme.backdropDeep — the floor, seen through overscroll */
+  --card: #FBFAF9;             /* theme.neutral[900] — a raised surface */
 
-  --text-primary: #FDFAF5;     /* theme.text.primary — headings and emphasis */
-  --text-strong: #EAE3D5;      /* theme.text.strong — section headings */
-  --text-secondary: #D4C9B5;   /* theme.text.secondary — body prose */
-  --text-muted: #A89880;       /* theme.text.muted — meta lines, the footer */
+  --text-primary: #0E0E0D;     /* theme.text.primary — headings and emphasis */
+  --text-strong: #181716;      /* theme.text.strong — section headings */
+  --text-secondary: #2B2A29;   /* theme.text.secondary — body prose */
+  --text-muted: #585552;       /* theme.text.muted — meta lines, the footer */
 
-  --accent: #F4AE51;           /* theme.accentText — amber[300]; the 4.5:1 stop, so links may use it */
-  --accent-soft: #F9D9A0;      /* theme.accentSoft — hover, and emphasis inside a quote */
+  --accent: #9A5300;           /* theme.accentText — the stop that reads as text on a light page */
+  --accent-soft: #D97706;      /* theme.accentSoft — hover */
 
-  --surface-subtle: rgba(212,201,181,0.05);  /* theme.surface.subtle */
-  --surface-base: rgba(212,201,181,0.06);    /* theme.surface.base */
-  --surface-raised: rgba(212,201,181,0.08);  /* theme.surface.raised */
+  --surface-subtle: #F2F0EE;   /* theme.surface.subtle */
+  --surface-base: #FBFAF9;     /* theme.surface.base — rows and cards */
+  --surface-raised: #FFFFFF;   /* theme.surface.raised — tiles on a card */
 
-  --glass-fill: rgba(212,201,181,0.15);      /* theme.glass.fill — the sticky bar */
-  --glass-border: rgba(212,201,181,0.18);    /* theme.glass.border — every hairline */
+  --glass-fill: rgba(251,250,249,0.75);      /* theme.glass.fill — the floating bar */
+  --glass-border: rgba(43,42,41,0.14);       /* theme.glass.border — every hairline */
+  --glass-hairline: rgba(43,42,41,0.08);     /* theme.glass.hairline — the bar's divider */
+}
+/* LIGHT THEME TOKENS — END */
 
-  /* theme.ambient.color (amber[400] #C66A00) split into components, because the
-     wash needs it at eight different alphas and `rgba(var(--glow), a)` works
-     everywhere, while `rgb(from …)` does not. amber[400] is a FILL tone: it is
-     3.4:1 and must never be used for text. */
-  --glow: 198,106,0;
+/* THEME TOKENS — START (locked by legalSiteTheme.test.ts) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    /* Near-neutral since 2026-09-03 — the app's ramps are generated at chroma
+       0.25 (`scripts/generate-accent-neutrals.py`); these are amber's stops. */
+    --backdrop: #0E0E0D;
+    --backdrop-deep: #060606;
+    --card: #181716;
+
+    --text-primary: #FBFAF9;
+    --text-strong: #E5E3E0;
+    --text-secondary: #CDCAC5;
+    --text-muted: #9D9A94;
+
+    --accent: #F4AE51;         /* amber[300], the 4.5:1 stop — never the fill */
+    --accent-soft: #F9D9A0;
+
+    --surface-subtle: #181716;
+    --surface-base: #1F1E1D;
+    --surface-raised: #2B2A29;
+
+    --glass-fill: rgba(205,202,197,0.15);
+    --glass-border: rgba(205,202,197,0.18);
+    --glass-hairline: rgba(205,202,197,0.08);
+  }
 }
 /* THEME TOKENS — END */
 
@@ -53,12 +79,49 @@
   --radius-card: 16px;
   --radius-chip: 12px;
 
-  --serif: "Libertinus Serif", "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua",
-    Georgia, serif;
-  --sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-    sans-serif;
+  --serif: "Libertinus Serif", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  /* The landing page's one curve: mass and spring, never a linear ease. */
+  --ease-fluid: cubic-bezier(0.32, 0.72, 0, 1);
 }
+
+/* ----------------------------------------------------------------- fonts -- */
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("../fonts/LibertinusSerif-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("../fonts/LibertinusSerif-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("../fonts/LibertinusSerif-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ------------------------------------------------------------------ base -- */
 
 *,
 *::before,
@@ -67,145 +130,145 @@
 }
 
 html {
-  /* The floor. `.ambient` is fixed to the viewport, so this is what shows
-     through iOS rubber-band overscroll — the deeper tone, as in the app's
-     drawer, rather than a white flash. */
+  /* The floor, seen through iOS rubber-band overscroll — the landing's too. */
   background: var(--backdrop-deep);
   -webkit-text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
-  /* No background here on purpose. A negative-z-index layer paints above the
-     ROOT element's background but below every in-flow block background, so a
-     background on `body` hides `.ambient` completely — which is exactly what
-     happened the first time. The page tone is painted by `.ambient` instead. */
+  /* Room for the bar's float, as PADDING: a margin on the bar collapsed
+     through `body` and left a 24px strip of the floor above the page. */
+  padding-top: 24px;
+  /* Flat, as on the landing page: one page tone, no ambient wash. */
+  background: var(--backdrop);
   color: var(--text-secondary);
   font-family: var(--sans);
   font-size: 17px;
   line-height: 1.65;
-}
-
-/* ---------------------------------------------------------------- ambient -- */
-
-/*
-  The app's ambient glow, in CSS. Same construction as `AmbientBackground.tsx`:
-  two amber blobs whose centres sit ABOVE the viewport so only their soft edge
-  reaches the screen, plus one centred glow just below the bottom edge. The stop
-  profiles are the app's values, unchanged.
-
-  Fixed rather than scrolled, because in the app the wash belongs to the screen
-  and not to the content moving over it.
-*/
-.ambient {
-  position: fixed;
-  /* Oversized by more than the drift below travels, so the moving layer can
-     never slide its own edge into view — the app does the same thing with a 2×
-     SVG. */
-  inset: -4%;
-  z-index: -1;
-  pointer-events: none;
-  background:
-    /* top-left blob — app: cx 10%, cy -10%, r 1.3W */
-    radial-gradient(
-      circle min(130vw, 1100px) at 10% -10%,
-      rgba(var(--glow), 0.55) 0%,
-      rgba(var(--glow), 0.36) 12%,
-      rgba(var(--glow), 0.16) 30%,
-      rgba(var(--glow), 0.02) 60%,
-      rgba(var(--glow), 0) 100%
-    ),
-    /* top-right blob — the pair reads as one wash across the top */
-    radial-gradient(
-      circle min(130vw, 1100px) at 90% -10%,
-      rgba(var(--glow), 0.55) 0%,
-      rgba(var(--glow), 0.36) 12%,
-      rgba(var(--glow), 0.16) 30%,
-      rgba(var(--glow), 0.02) 60%,
-      rgba(var(--glow), 0) 100%
-    ),
-    /* bottom glow — centred, anchored just below the edge */
-    radial-gradient(
-      circle 102vh at 50% 108%,
-      rgba(var(--glow), 0.34) 0%,
-      rgba(var(--glow), 0.19) 8%,
-      rgba(var(--glow), 0.06) 18%,
-      rgba(var(--glow), 0.011) 35%,
-      rgba(var(--glow), 0) 100%
-    ),
-    /* …and the page tone underneath all three, so this one layer is the whole
-       backdrop — the same thing `AmbientBackground` sits on in the app. */
-    var(--backdrop);
-}
-
-/*
-  A nod to the app's drift, not a reproduction of it: one slow loop instead of
-  seven, and a fraction of the travel. This is a page people read, and a glow
-  that moves enough to notice would be a nuisance rather than atmosphere.
-*/
-@media (prefers-reduced-motion: no-preference) {
-  .ambient {
-    animation: ambient-drift 32s ease-in-out infinite alternate;
-  }
-}
-
-@keyframes ambient-drift {
-  from {
-    transform: translate3d(-1.5%, 0, 0);
-  }
-  to {
-    transform: translate3d(1.5%, -0.6%, 0);
-  }
+  text-wrap: pretty;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* ------------------------------------------------------------------- nav -- */
 
 /*
-  Glass, and deliberately translucent: the app's rule is that content passing
-  under a pinned bar must dissolve into it rather than be sliced by an opaque
-  band. Same treatment here.
+  The landing's bar: a glass pill floating 24px under the top edge, the heart
+  and the wordmark, a hairline, then the links. Sticky rather than fixed, so it
+  needs no room reserved above the content. Translucent on purpose: content
+  passing under a pinned bar dissolves into it rather than being sliced.
 */
 .topbar {
   position: sticky;
-  top: 0;
+  top: 24px;
   z-index: 10;
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 8px 20px;
-  padding: 12px 20px;
-  background: var(--glass-fill);
-  border-bottom: 1px solid var(--glass-border);
-  -webkit-backdrop-filter: saturate(140%) blur(20px);
-  backdrop-filter: saturate(140%) blur(20px);
+  justify-content: center;
+  padding: 0 16px;
+  pointer-events: none;
 }
 
-.topbar .brand {
-  font-family: var(--serif);
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--text-primary);
-  text-decoration: none;
-  margin-right: auto;
-}
-
-.topbar nav {
+.bar {
+  pointer-events: auto;
   display: flex;
-  gap: 18px;
-  font-size: 15px;
+  align-items: stretch;
+  max-width: 100%;
+  border-radius: 9999px;
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: saturate(160%) blur(24px);
+  backdrop-filter: saturate(160%) blur(24px);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.12),
+    inset 0 -1px 0 rgb(0 0 0 / 0.12),
+    0 12px 32px -16px rgb(0 0 0 / 0.55);
 }
 
-.topbar nav a {
-  color: var(--text-muted);
+@media (prefers-color-scheme: light) {
+  .bar {
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.8),
+      inset 0 -1px 0 rgb(0 0 0 / 0.04),
+      0 12px 32px -16px rgb(0 0 0 / 0.25);
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 9999px;
   text-decoration: none;
 }
 
-.topbar nav a:hover {
+.brand img {
+  display: block;
+}
+
+.wordmark {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
   color: var(--text-primary);
 }
 
-.topbar nav a[aria-current="page"] {
-  color: var(--accent);
+.rule {
+  width: 1px;
+  margin: 8px 0;
+  background: var(--glass-hairline);
+}
+
+.bar nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+}
+
+.bar nav a {
+  padding: 8px 12px;
+  border-radius: 9999px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition:
+    background-color 200ms var(--ease-fluid),
+    color 200ms var(--ease-fluid);
+}
+
+.bar nav a:hover {
+  color: var(--text-primary);
+  background: color-mix(in srgb, var(--text-primary) 6%, transparent);
+}
+
+/* The current page wears the pale pill the landing gives the section in view. */
+.bar nav a[aria-current="page"] {
+  color: var(--text-primary);
+  background: var(--glass-fill);
+}
+
+/* A phone: the heart alone stands for the name, so the three links fit. */
+@media (max-width: 400px) {
+  .brand {
+    padding: 8px 12px;
+  }
+
+  .brand .wordmark {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .bar nav a {
+    padding: 8px 10px;
+  }
 }
 
 /* ------------------------------------------------------------------ page -- */
@@ -213,7 +276,7 @@ body {
 .page {
   max-width: 44rem;
   margin: 0 auto;
-  padding: 40px 20px 72px;
+  padding: 64px 16px 80px;
 }
 
 .page > :first-child {
@@ -227,25 +290,34 @@ h4 {
   font-family: var(--serif);
   font-weight: 600;
   line-height: 1.2;
-  color: var(--text-strong);
+  color: var(--text-primary);
+  text-wrap: balance;
 }
 
 h1 {
-  /* The app's `ScreenTitle` is serif 30. This grows a little on a wide window
-     and never below the app's size on a phone. */
-  font-size: clamp(30px, 6vw, 38px);
-  color: var(--text-primary);
-  margin: 8px 0 24px;
-  letter-spacing: -0.01em;
+  /* The landing's section headings: 36px, 48px from a tablet up. */
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0 0 24px;
+}
+
+@media (min-width: 48rem) {
+  h1 {
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 32px;
+  }
 }
 
 h2 {
-  font-size: 25px;
+  font-size: 24px;
+  line-height: 32px;
   margin: 48px 0 12px;
 }
 
 h3 {
   font-size: 20px;
+  line-height: 28px;
   margin: 32px 0 8px;
 }
 
@@ -264,7 +336,7 @@ a {
   color: var(--accent);
   /* Underlined in prose on purpose: colour alone is not an accessible way to
      mark a link (WCAG 1.4.1), and this is a document where following the right
-     reference matters. The nav opts out because position identifies it. */
+     reference matters. The bar opts out because position identifies it. */
   text-decoration: underline;
   text-underline-offset: 2px;
   /* Derived from the token rather than written out, so a different accent
@@ -305,12 +377,13 @@ hr {
 
 blockquote {
   /* The draft banner `publish-legal.py` injects renders as a blockquote, and
-     its entire job is to be impossible to miss — hence the accent rule. */
+     its entire job is to be impossible to miss — hence the accent. A full
+     border, not one side: the landing's cards are bordered all round. */
   margin: 24px 0;
-  padding: 14px 18px;
+  padding: 16px;
   background: var(--surface-base);
-  border-left: 3px solid var(--accent);
-  border-radius: 0 var(--radius-chip) var(--radius-chip) 0;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-chip);
   color: var(--text-secondary);
 }
 
@@ -319,7 +392,7 @@ blockquote > :last-child {
 }
 
 blockquote strong {
-  color: var(--accent-soft);
+  color: var(--accent);
 }
 
 code {
@@ -374,7 +447,7 @@ tbody tr:nth-child(even) {
   list-style: none;
   padding: 0;
   display: grid;
-  gap: 10px;
+  gap: 12px;
 }
 
 .home .page li {
@@ -383,13 +456,16 @@ tbody tr:nth-child(even) {
 
 .home .page li a {
   display: block;
-  padding: 16px 18px;
-  background: var(--card);
+  padding: 16px;
+  background: var(--surface-base);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-card);
   color: var(--text-primary);
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
+  transition:
+    background-color 200ms var(--ease-fluid),
+    border-color 200ms var(--ease-fluid);
 }
 
 .home .page li a::after {
@@ -404,15 +480,29 @@ tbody tr:nth-child(even) {
 
 /* ---------------------------------------------------------------- footer -- */
 
+/* The landing's footer: a hairline across the page, then small muted text. */
 .foot {
-  max-width: 44rem;
-  margin: 0 auto;
-  padding: 24px 20px 48px;
   border-top: 1px solid var(--glass-border);
   color: var(--text-muted);
   font-size: 14px;
+  line-height: 20px;
+}
+
+.foot-inner {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
 }
 
 .foot p {
-  margin: 0 0 4px;
+  margin: 0 0 8px;
+}
+
+.foot a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.foot a:hover {
+  color: var(--text-primary);
 }

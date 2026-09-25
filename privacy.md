@@ -7,7 +7,7 @@ nav_order: 1
 # Privacy Policy
 
 **Effective date:** 16 August 2026
-**Last updated:** 21 August 2026
+**Last updated:** 26 September 2026
 
 
 ---
@@ -29,7 +29,7 @@ The rest of this document explains that in the detail the law expects.
 Remedies is made by **Ivan Davydov**, an individual entrepreneur registered in Georgia. One person,
 no company.
 
-Contact: **imdavydov@outlook.com**, Batumi, Georgia. A supervisory authority that needs my full
+Contact: **ivandavy@remediesapp.com**, Batumi, Georgia. A supervisory authority that needs my full
 registered address can have it on request.
 
 Because I do not process your personal data (see §3), I am not acting as a "data controller" for the
@@ -142,4 +142,4 @@ the top of this document is when it last changed.
 
 ## 13. Contact
 
-**imdavydov@outlook.com**
+**ivandavy@remediesapp.com**

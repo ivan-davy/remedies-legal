@@ -7,7 +7,7 @@ nav_order: 3
 # Medical Disclaimer
 
 **Effective date:** 16 August 2026
-**Last updated:** 21 August 2026
+**Last updated:** 26 September 2026
 
 
 ---
@@ -45,4 +45,4 @@ In an emergency, call your local emergency number or go to the nearest hospital.
 
 ## Contact
 
-**imdavydov@outlook.com**
+**ivandavy@remediesapp.com**

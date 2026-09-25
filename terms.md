@@ -7,7 +7,7 @@ nav_order: 2
 # Terms of Use
 
 **Effective date:** 16 August 2026
-**Last updated:** 16 August 2026
+**Last updated:** 26 September 2026
 
 
 ---
@@ -109,4 +109,4 @@ I may update these terms. The date at the top says when they last changed.
 
 ## 13. Contact
 
-**imdavydov@outlook.com**
+**ivandavy@remediesapp.com**

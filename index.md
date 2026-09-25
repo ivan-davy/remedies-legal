@@ -18,4 +18,4 @@ It has no accounts and no server. Everything you enter stays on your iPhone, enc
 
 ## Contact
 
-<imdavydov@outlook.com>
+<ivandavy@remediesapp.com>

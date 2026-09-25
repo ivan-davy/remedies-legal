@@ -5,10 +5,11 @@ title: Remedies — legal
 
 # Remedies
 
-Remedies is an iPhone app for keeping track of the medicines in your home — what you have, how much
-is left, when it expires, and when to take it.
+Remedies is an iPhone application for recording the medicines kept in a household: the medicines
+held, remaining quantities, expiry dates and dosing schedules.
 
-It has no accounts and no server. Everything you enter stays on your iPhone, encrypted.
+The application has no user accounts and no server-side component. Data entered into it is stored
+on the device in encrypted form.
 
 ## Documents
 

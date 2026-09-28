@@ -31,7 +31,7 @@
   --text-secondary: #2B2A29;   /* theme.text.secondary — body prose */
   --text-muted: #585552;       /* theme.text.muted — meta lines, the footer */
 
-  --accent: #9A5300;           /* theme.accentText — the stop that reads as text on a light page */
+  --accent: #D97706;           /* theme.accentText — the accent's own orange (2026-09-28); the deep stop under prefers-contrast, below */
   --accent-soft: #D97706;      /* theme.accentSoft — hover */
 
   --surface-subtle: #F2F0EE;   /* theme.surface.subtle */
@@ -43,6 +43,16 @@
   --glass-hairline: rgba(43,42,41,0.08);     /* theme.glass.hairline — the bar's divider */
 }
 /* LIGHT THEME TOKENS — END */
+
+/* «Increase Contrast» — the app's Increase-Contrast theme: accent words take
+   the deep stop that reads at 4.5:1 on the light page. BEFORE the dark block,
+   which sets its own (in dark the two stops are one colour). Locked by
+   legalSiteTheme.test.ts. */
+@media (prefers-contrast: more) {
+  :root {
+    --accent: #9A5300;
+  }
+}
 
 /* THEME TOKENS — START (locked by legalSiteTheme.test.ts) */
 @media (prefers-color-scheme: dark) {

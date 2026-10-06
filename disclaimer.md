@@ -2,6 +2,7 @@
 layout: default
 title: Medical Disclaimer
 nav_order: 3
+lang: en
 ---
 
 # Medical Disclaimer

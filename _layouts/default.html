@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ page.lang | default: 'en' }}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -54,7 +54,7 @@
     <footer class="foot">
       <div class="foot-inner">
         <p>Remedies is an iPhone app. About&nbsp;→&nbsp;Legal opens these pages.</p>
-        <p><a href="mailto:ivandavy@remediesapp.com">ivandavy@remediesapp.com</a> · <a href="{{ '/assets/fonts/OFL.txt' | relative_url }}">Font licences</a></p>
+        <p><a href="mailto:ivandavy@remediesapp.com">ivandavy@remediesapp.com</a> · <a href="{{ '/assets/fonts/OFL.txt' | relative_url }}">Font licences</a>{% if page.lang == 'de' %} · <a href="{{ '/impressum' | relative_url }}">Impressum</a>{% endif %}</p>
       </div>
     </footer>
   </body>

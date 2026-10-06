@@ -14,6 +14,7 @@ on the device in encrypted form.
 ## Documents
 
 - [Privacy Policy](./privacy)
+- [Datenschutzerklärung](./de/privacy) (Deutsch)
 - [Terms of Use](./terms)
 - [Medical Disclaimer](./disclaimer)
 

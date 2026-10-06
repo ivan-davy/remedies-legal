@@ -2,8 +2,7 @@
   Remedies — the legal site's stylesheet.
 
   Styled as the landing page (`apps/web`) is, so that following a link from one
-  to the other reads as one site (owner, 2026-09-25: «чтобы при переключении
-  выглядело когерентно»): the app's amber theme in BOTH modes, following the
+  to the other reads as one site: the app's amber theme in BOTH modes, following the
   system; a flat page tone; the landing's floating glass bar with the heart and
   the wordmark; Inter and Libertinus Serif. Nothing more — these are documents.
 
@@ -31,7 +30,7 @@
   --text-secondary: #2B2A29;   /* theme.text.secondary — body prose */
   --text-muted: #585552;       /* theme.text.muted — meta lines, the footer */
 
-  --accent: #D97706;           /* theme.accentText — the accent's own orange (2026-09-28); the deep stop under prefers-contrast, below */
+  --accent: #D97706;           /* theme.accentText — the accent's own orange; the deep stop under prefers-contrast, below */
   --accent-soft: #D97706;      /* theme.accentSoft — hover */
 
   --surface-subtle: #F2F0EE;   /* theme.surface.subtle */
@@ -59,7 +58,7 @@
   :root {
     color-scheme: dark;
 
-    /* Near-neutral since 2026-09-03 — the app's ramps are generated at chroma
+    /* Near-neutral — the app's ramps are generated at chroma
        0.25 (`scripts/generate-accent-neutrals.py`); these are amber's stops. */
     --backdrop: #0E0E0D;
     --backdrop-deep: #060606;

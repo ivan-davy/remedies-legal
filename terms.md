@@ -2,6 +2,7 @@
 layout: default
 title: Terms of Use
 nav_order: 2
+lang: en
 ---
 
 # Terms of Use

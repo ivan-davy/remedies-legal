@@ -8,7 +8,7 @@ lang: de
 # Datenschutzerklärung
 
 **Gültig ab:** 16. August 2026
-**Zuletzt aktualisiert:** 27. September 2026
+**Zuletzt aktualisiert:** 12. Oktober 2026
 
 
 Diese Übersetzung dient Ihrer Information. Maßgeblich ist die
@@ -22,7 +22,8 @@ Die iOS-Anwendung Remedies (die „App“) erhebt keine personenbezogenen Daten.
 
 Die App hat keine Benutzerkonten und keine serverseitige Komponente. Sie stellt selbst keine
 Netzwerkverbindungen her; die einzige Netzwerkaktivität im Zusammenhang mit ihr ist der In-App-Kauf
-über Apple. Sie enthält keine Analyse-, Werbe- oder Absturzberichtsdienste. In die App eingegebene
+über Apple sowie Webseiten und E-Mails, die der Nutzer aus ihr heraus öffnet (Abschnitt 3). Sie
+enthält keine Analyse-, Werbe- oder Absturzberichtsdienste. In die App eingegebene
 Daten werden verschlüsselt auf dem Gerät des Nutzers gespeichert und weder an den Entwickler noch an
 Dritte übermittelt. Der Entwickler hat keinen Zugriff auf diese Daten und kann sie daher auch nicht
 weitergeben.
@@ -40,8 +41,8 @@ Die folgenden Abschnitte erläutern dies im Einzelnen.
 Die App wird von **Ivan Davydov** entwickelt, einem in Georgien registrierten Einzelunternehmer
 (der „Entwickler“). Eine Gesellschaft oder sonstige juristische Person ist nicht beteiligt.
 
-Kontakt: **ivandavy@remediesapp.com**, Batumi, Georgien. Die vollständige eingetragene Anschrift
-des Entwicklers wird einer Aufsichtsbehörde auf Anfrage mitgeteilt.
+Kontakt: **ivandavy@remediesapp.com**, Batumi, Georgien. Die vollständige Anschrift des Entwicklers
+ist im Impressum veröffentlicht: <https://ivan-davy.github.io/remedies-legal/impressum>.
 
 Der Entwickler verarbeitet die in die App eingegebenen personenbezogenen Daten nicht (siehe
 Abschnitt 3) und ist daher für diese Daten nicht Verantwortlicher. Verantwortlicher ist der
@@ -69,8 +70,19 @@ Insbesondere wird die App **nicht**:
   Erlaubnis zum Tracking;
 - auf Kontakte, Standort, Gesundheitsdaten, den Kalender oder das Mikrofon zugreifen.
 
-Die einzige Netzwerkaktivität im Zusammenhang mit der App ist der In-App-Kauf über Apple (siehe
-Abschnitt 9).
+Die einzige Netzwerkaktivität im Zusammenhang mit der App ist:
+
+- der In-App-Kauf über Apple (siehe Abschnitt 9);
+- Webseiten, die der Nutzer aus der App heraus öffnet und die in Safari innerhalb der App angezeigt
+  werden: diese Rechtstexte (auf GitHub Pages), die Ideen-Seite unter remedies.fider.io (betrieben
+  von Fider) und eine Support-Seite von Apple. Für jede gilt die Datenschutzerklärung der Website,
+  die sie ausliefert, und die App übermittelt ihr nichts über den Nutzer;
+- E-Mails, die der Nutzer aus der App heraus schreibt und die in seiner eigenen Mail-App an den
+  Entwickler adressiert geöffnet werden. Eine Feedback-E-Mail ist unterhalb des Platzes für die
+  Nachricht des Nutzers mit der Version der App, der iOS-Version, dem Modell des Geräts (zum
+  Beispiel „iPhone 15 Pro“), der Sprache der App und der Angabe, ob Remedies Plus aktiv ist,
+  vorausgefüllt. Nichts aus den Einträgen des Nutzers wird
+  übernommen, und der Nutzer kann alles davon vor dem Senden ändern oder löschen.
 
 ## 4. Auf dem Gerät gespeicherte Daten
 
@@ -79,15 +91,25 @@ wird an den Entwickler übermittelt.
 
 | Kategorie | Speicherung |
 | --- | --- |
-| Medikamente, Wirkstärken, Mengen, Verfallsdaten, Etiketten und Notizen des Nutzers | Verschlüsselter App-Speicher |
-| Kuren, Zeitpläne und erfasste Einnahmen | Verschlüsselter App-Speicher |
-| Fotos von Verpackungen und Packungsbeilagen | Verschlüsselte Dateien im privaten Speicher der App |
+| Einträge zu Medikamenten, Nahrungsergänzungsmitteln, Verbrauchsmaterial und Geräten: Namen, Wirkstoffe, Wirkstärken, Darreichungsformen, Mengen, Verfallsdaten, Aufbewahrungsorte, Etiketten, Notizen und die aus einer Packungsbeilage übernommenen Angaben | Verschlüsselter App-Speicher |
+| Sammlungen (die Orte, an denen Dinge aufbewahrt werden) | Verschlüsselter App-Speicher |
+| Kuren, Zeitpläne und das Journal der eingenommenen und ausgelassenen Dosen | Verschlüsselter App-Speicher |
+| Fotos von Verpackungen, vom Gegenstand selbst und von seiner Packungsbeilage oder Anleitung | Verschlüsselte Dateien im privaten Speicher der App |
 | Erinnerungseinstellungen und der Erinnerungsverlauf in der App | Verschlüsselter App-Speicher |
-| Sprache, Design und andere Einstellungen | Verschlüsselter App-Speicher |
+| Sprache, Design und andere Einstellungen sowie die letzten Suchanfragen | Verschlüsselter App-Speicher |
+| Ob Remedies Plus gekauft wurde (eine Kopie, damit die App offline funktioniert), und die Zahl der Smart-Scan-Nutzungen im laufenden Monat | Verschlüsselter App-Speicher |
 
 **Verschlüsselung.** Die Daten werden mit einem Schlüssel verschlüsselt, der auf dem Gerät erzeugt
-und im iOS-Schlüsselbund gespeichert wird. Der Schlüssel verlässt das Gerät nicht und ist für den
-Entwickler nicht zugänglich.
+und im iOS-Schlüsselbund gespeichert wird. Die App übermittelt den Schlüssel nie, und er ist für den
+Entwickler nicht zugänglich. iOS nimmt ihn in Gerätebackups auf, wie unten beschrieben.
+
+**Arbeitskopien.** Um ein Foto anzuzeigen, braucht iOS es entschlüsselt; die App hält deshalb eine
+begrenzte Zahl entschlüsselter Kopien in ihrem Cache-Verzeichnis, und das Löschen eines Eintrags
+löscht seine Kopien. In der App aufgenommene oder ausgewählte Fotos durchlaufen den Cache, bevor sie
+verschlüsselt werden; diese Kopien werden beim nächsten Start der App gelöscht. Auch das zuletzt
+exportierte Archiv (Abschnitt 8) bleibt bis zum nächsten Export im Cache. Der Cache gehört zum
+privaten Speicher der App, ist nicht Teil von Gerätebackups und wird durch *App zurücksetzen*
+(Abschnitt 8) geleert.
 
 **Gerätebackups.** Ein iPhone-Backup, ob in iCloud oder auf einem Computer, enthält die Daten der
 App in verschlüsselter Form. Der Schlüssel ist im Schlüsselbund-Teil des Backups enthalten, damit die
@@ -102,12 +124,13 @@ exportieren (siehe Abschnitt 8).
 Die App fragt die folgenden Berechtigungen nur an, wenn eine Funktion genutzt wird, die sie
 benötigt:
 
-- **Kamera**: um eine Verpackung oder eine Packungsbeilage zu fotografieren.
-- **Fotomediathek**: um ein vorhandenes Bild anzuhängen; und gesondert der Zugriff „Nur hinzufügen“,
-  um auf Wunsch des Nutzers ein Bild aus der App in der Fotomediathek zu sichern.
+- **Kamera**: um einen Gegenstand, seine Verpackung oder seine Packungsbeilage zu fotografieren.
+- **Fotomediathek, „Nur hinzufügen“**: um auf Wunsch des Nutzers ein Foto aus der App in der
+  Fotomediathek zu sichern.
 
-Auf diese Weise erhaltene Bilder werden im verschlüsselten Speicher der App abgelegt und nicht
-hochgeladen.
+Ein vorhandenes Bild wird über die Fotoauswahl von iOS angehängt, die der App nur die vom Nutzer
+gewählten Bilder gibt und keine Berechtigung benötigt. Auf beide Arten erhaltene Bilder werden im
+verschlüsselten Speicher der App abgelegt und nicht hochgeladen.
 
 ## 6. Smart Scan
 
@@ -120,7 +143,8 @@ verlässt das Gerät, und keines von beiden wird an den Entwickler oder an Dritt
 Erinnerungen werden von iOS lokal geplant. Die App verwendet keinen Server für Push-Mitteilungen und
 hat keine Möglichkeit, Mitteilungen von außerhalb des Geräts zu senden. Welche Inhalte einer
 Erinnerung auf dem Sperrbildschirm erscheinen, legt der Nutzer fest; standardmäßig enthält eine
-Erinnerung den Namen des Medikaments **nicht**.
+Erinnerung den Namen des Medikaments **nicht**. Wählt der Nutzer, Namen anzuzeigen, enthält eine
+Erinnerung an eine einzelne Dosis auch das Foto des Gegenstands, sofern es eines gibt.
 
 ## 8. Rechte der betroffenen Personen
 
@@ -135,9 +159,17 @@ direkt in der App ausgeübt:
   werden. Die App sendet das Archiv nirgendwohin; wohin es geht, bestimmt der Nutzer. Einstellungen
   → Daten → *Aus einem Backup wiederherstellen* stellt ein Archiv wieder her und ersetzt dabei die
   aktuell in der App vorhandenen Daten.
-- **Löschung.** Das Löschen der App entfernt ihre Daten vom Gerät. Der Entwickler besitzt keine
-  Kopie. Kopien in Gerätebackups oder exportierten Archiven bleiben unter der Kontrolle des Nutzers.
-- **Berichtigung.** Jeder Eintrag kann in der App bearbeitet werden.
+- **Löschung.** Einstellungen → Zurücksetzen → *App zurücksetzen* löscht alles, was die App auf dem
+  Gerät speichert: die Einträge, Fotos, Kuren, das Journal, die Sammlungen, die Einstellungen und
+  die Arbeitskopien in ihrem Cache. Zwei Dinge bleiben erhalten: der Kauf von Remedies Plus, den
+  Apple verwaltet, und die Zahl der Smart-Scan-Nutzungen im laufenden Monat, damit ein Zurücksetzen
+  keine kostenlosen Scans zurückbringt. Auch das Löschen der App entfernt ihre Daten vom Gerät; der
+  Schlüssel bleibt im iOS-Schlüsselbund, wo er nichts mehr entschlüsseln kann, sobald die Daten
+  gelöscht sind. Der Entwickler besitzt keine Kopie. Kopien in Gerätebackups oder exportierten
+  Archiven bleiben unter der Kontrolle des Nutzers.
+- **Berichtigung.** Jeder Eintrag kann in der App bearbeitet werden. Die Fotos gelöschter Einträge
+  werden beim nächsten Start der App gelöscht, sofern sie dann überhaupt Einträge enthält; bis dahin
+  bleiben sie erhalten, damit das Löschen rückgängig gemacht werden kann.
 
 Nutzer im Vereinigten Königreich oder in der Europäischen Union haben nach der DSGVO außerdem das
 Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, und können vom Entwickler
@@ -154,9 +186,11 @@ Der Entwickler verkauft, vermietet oder gibt Nutzerdaten auf andere Weise nicht 
 nicht besitzt. An der App sind keine Auftragsverarbeiter, Werbeanbieter oder Analyseanbieter
 beteiligt. Die von der Website eingesetzten Auftragsverarbeiter sind in Abschnitt 12 genannt.
 
-Käufe von Remedies Plus werden von **Apple** abgewickelt. Apple teilt dem Entwickler mit, dass ein
-Kauf getätigt wurde; Namen, Zahlungskartendaten oder Rechnungsanschrift des Käufers erhält der
-Entwickler nicht. Für Apples Verarbeitung dieser Daten gilt Apples Datenschutzrichtlinie.
+Käufe von Remedies Plus werden von **Apple** abgewickelt. Die App bestätigt einen Kauf auf dem
+Gerät bei Apple. Der Entwickler erhält von Apple nur die Verkaufsberichte, die Apple jedem
+Entwickler bereitstellt und die den Käufer nicht identifizieren; Namen, Zahlungskartendaten oder
+Rechnungsanschrift des Käufers erhält der Entwickler nicht. Für Apples Verarbeitung dieser Daten
+gilt Apples Datenschutzrichtlinie.
 
 ## 10. Kinder
 

@@ -8,15 +8,16 @@ lang: en
 # Terms of Use
 
 **Effective date:** 16 August 2026
-**Last updated:** 26 September 2026
+**Last updated:** 9 October 2026
 
 
 ---
 
 ## 1. General
 
-Remedies (the "App") is an iPhone application for recording the medicines kept in a household: the
-medicines held, remaining quantities, expiry dates and dosing schedules. The App is developed by
+Remedies (the "App") is an iPhone application for recording what a household keeps for its health:
+medicines, food supplements, medical supplies and equipment, with their remaining quantities, expiry
+dates and dosing schedules. The App is developed by
 **Ivan Davydov**, an individual entrepreneur registered in Georgia (the "Developer").
 
 By using the App you accept these Terms of Use (the "Terms"). If you do not accept them, do not use
@@ -34,9 +35,14 @@ acknowledged before the App can be used.
 - **Not medical advice.** No content in the App constitutes medical or pharmaceutical advice.
   Questions about doses, interactions, side effects and the suitability of a medicine should be
   directed to a doctor or pharmacist.
-- **No verification.** The App displays information entered or scanned by the user. It does not
-  verify names, strengths, doses or expiry dates against any source. The packaging or patient
-  leaflet must be consulted before any medicine is taken.
+- **No verification.** The App displays information entered or scanned by the user. To save
+  typing, it also suggests names from a list bundled with it: choosing one fills in that product's
+  active substances, manufacturer and, where it has only one, its form. It also suggests labels for
+  what a substance is commonly used for, and shows a classification code for a medicine's
+  substance. These suggestions are compiled without verification against any official register and
+  may be wrong, incomplete or out of date, and nothing is filled in without the user choosing it.
+  The App does not verify names, active substances, strengths, doses or expiry dates against any
+  source. The packaging or patient leaflet must be consulted before any medicine is taken.
 - **Not suitable for time-critical doses.** Reminders are standard iOS notifications. iOS may delay
   or suppress them, and no reminders are delivered while the device is switched off. The App must
   not be relied upon as the sole means of ensuring that a time-critical dose is taken.
@@ -99,6 +105,10 @@ These Terms are governed by the law of **Georgia**.
 
 
 ## 11. Apple
+
+If you obtained the App from the App Store, your licence to use it is granted under Apple's standard
+Licensed Application End User License Agreement. These Terms add to that agreement and, for the App
+obtained from the App Store, it prevails where the two conflict.
 
 Apple is not a party to these Terms and has no responsibility for the App. If the App fails to
 conform to any applicable warranty, you may notify Apple, and Apple may refund the purchase price

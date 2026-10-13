@@ -8,7 +8,7 @@ lang: en
 # Privacy Policy
 
 **Effective date:** 16 August 2026
-**Last updated:** 27 September 2026
+**Last updated:** 12 October 2026
 
 
 ---
@@ -18,8 +18,9 @@ lang: en
 The Remedies iOS application (the "App") does not collect personal data.
 
 The App has no user accounts and no server-side component. It makes no network requests of its
-own; the only network activity associated with it is Apple's in-app purchase flow. It contains no
-analytics, advertising or crash-reporting services. Data entered into the App is stored on the
+own; the only network activity associated with it is Apple's in-app purchase flow, and web pages or
+emails the user chooses to open from it (Section 3). It contains no analytics, advertising or
+crash-reporting services. Data entered into the App is stored on the
 user's device in encrypted form and is not transmitted to the Developer or to any third party. The
 Developer has no access to that data and is therefore not in a position to disclose it.
 
@@ -35,8 +36,8 @@ The sections below set this out in detail.
 The App is developed by **Ivan Davydov**, an individual entrepreneur registered in Georgia (the
 "Developer"). No company or other legal entity is involved.
 
-Contact: **ivandavy@remediesapp.com**, Batumi, Georgia. The Developer's full registered address is
-available to a supervisory authority on request.
+Contact: **ivandavy@remediesapp.com**, Batumi, Georgia. The Developer's full address is published in
+the Impressum: <https://ivan-davy.github.io/remedies-legal/impressum>.
 
 The Developer does not process the personal data entered into the App (see Section 3) and is
 therefore not a controller of that data. The Developer is a controller only of data that a user
@@ -63,7 +64,19 @@ In particular, the App does **not**:
 - track users across apps or websites, and for that reason does not request tracking permission;
 - access contacts, location, health records, the calendar or the microphone.
 
-The only network activity associated with the App is Apple's in-app purchase flow (see Section 9).
+The only network activity associated with the App is:
+
+- Apple's in-app purchase flow (see Section 9);
+- web pages the user chooses to open from the App, shown in Safari inside the App: these legal
+  documents (on GitHub Pages), the ideas board at remedies.fider.io (run by Fider), and an Apple
+  support page. Each is subject to the privacy policy of the site that serves it, and the App sends
+  it nothing about the user;
+- emails the user chooses to write from the App, which open in the user's own mail app addressed
+  to the Developer. A feedback email is pre-filled, below the space for the user's message, with
+  the App's version, the iOS version, the model of the device (for example "iPhone 15 Pro"), the
+  App's language and whether Remedies Plus is active.
+  Nothing from the user's records is included, and the user can change or delete any of it before
+  sending.
 
 ## 4. Data stored on the device
 
@@ -72,14 +85,24 @@ Developer.
 
 | Category | Storage |
 | --- | --- |
-| Medicines, strengths, quantities, expiry dates, labels and user notes | Encrypted app storage |
-| Courses, schedules and logged doses | Encrypted app storage |
-| Photographs of packaging and patient leaflets | Encrypted files in the App's private storage |
+| Records of medicines, food supplements, medical supplies and equipment: names, active substances, strengths, forms, quantities, expiry dates, where each is kept, labels, notes, and the details taken from a patient leaflet | Encrypted app storage |
+| Collections (the places items are kept) | Encrypted app storage |
+| Courses, schedules and the journal of taken and skipped doses | Encrypted app storage |
+| Photographs of packaging, of the item itself and of its leaflet or instructions | Encrypted files in the App's private storage |
 | Reminder settings and the in-app reminder history | Encrypted app storage |
-| Language, theme and other preferences | Encrypted app storage |
+| Language, theme and other preferences, and recent searches | Encrypted app storage |
+| Whether Remedies Plus has been purchased (a copy kept so the App works offline) and the count of Smart Scan uses in the current month | Encrypted app storage |
 
 **Encryption.** The data is encrypted with a key that is generated on the device and stored in the
-iOS Keychain. The key does not leave the device and is not accessible to the Developer.
+iOS Keychain. The App never transmits the key, and it is not accessible to the Developer. iOS
+includes it in device backups, as described below.
+
+**Working copies.** To show a photograph, iOS needs it decrypted, so the App keeps a limited number of
+decrypted copies in its cache directory; deleting a record deletes its copies. Photographs taken or
+chosen in the App pass through the cache before they are encrypted, and those copies are deleted the
+next time the App starts. The last exported archive (Section 8) also stays in the cache until the
+next export. The cache is part of the App's private storage, is not included in device backups, and
+is cleared by *Reset the app* (Section 8).
 
 **Device backups.** An iPhone backup, whether to iCloud or to a computer, includes the App's data in
 encrypted form. The encryption key is included in the Keychain portion of the backup so that the
@@ -92,11 +115,13 @@ backup or export the data (see Section 8).
 
 The App requests the following permissions only when a feature that requires them is used:
 
-- **Camera** — to photograph packaging or a patient leaflet.
-- **Photo library** — to attach an existing image; and, separately, "add only" access, to save an
-  image from the App to the photo library at the user's request.
+- **Camera** — to photograph an item, its packaging or its leaflet.
+- **Photo library, "add only"** — to save a photograph from the App to the photo library, at the
+  user's request.
 
-Images obtained in this way are stored in the App's encrypted storage and are not uploaded.
+An existing image is attached through the iOS photo picker, which gives the App only the images the
+user selects and needs no permission. Images obtained in either way are stored in the App's
+encrypted storage and are not uploaded.
 
 ## 6. Smart Scan
 
@@ -109,6 +134,8 @@ leaves the device, and neither is sent to the Developer or to any third party.
 Reminders are scheduled locally by iOS. The App does not use a push-notification server and has no
 means of sending notifications from outside the device. The content of reminders shown on the lock
 screen is set by the user; by default, a reminder does **not** include the name of the medicine.
+When the user chooses to show names, a reminder about a single dose also carries the item's
+photograph, if it has one.
 
 ## 8. Data subject rights
 
@@ -122,9 +149,17 @@ directly in the App:
   a private location. The App does not send the archive anywhere; its destination is chosen by the
   user. Settings → Data → *Restore from a backup* restores an archive, replacing the data currently
   in the App.
-- **Erasure.** Deleting the App removes its data from the device. The Developer holds no copy.
-  Copies in device backups or exported archives remain under the user's control.
-- **Rectification.** Any record can be edited in the App.
+- **Erasure.** Settings → Reset → *Reset the app* deletes everything the App holds on the device:
+  the records, photographs, courses, journal, collections, settings and the working copies in its
+  cache. Two things are kept: the purchase of Remedies Plus, which Apple holds, and the count of
+  Smart Scan uses in the current month, so that a reset does not restore free scans. Deleting the
+  App also
+  removes its data from the device; the encryption key remains in the iOS Keychain, where it can
+  decrypt nothing once the data is gone. The Developer holds no copy. Copies in device backups or
+  exported archives remain under the user's control.
+- **Rectification.** Any record can be edited in the App. The photographs of deleted
+  records are deleted when the App next starts, unless it then holds no records at all; until then
+  they are kept so that a deletion can be undone.
 
 Users in the United Kingdom or the European Union also have the right under the GDPR to lodge a
 complaint with a data protection supervisory authority, and to request from the Developer access
@@ -140,9 +175,11 @@ The Developer does not sell, rent or otherwise disclose user data, as the Develo
 it. The App involves no third-party processors, advertising providers or analytics providers. The
 processors used by the Website are named in Section 12.
 
-Purchases of Remedies Plus are processed by **Apple**. Apple informs the Developer that a purchase
-has been made; the Developer does not receive the purchaser's name, payment card details or billing
-address. Apple's processing of that data is governed by Apple's privacy policy.
+Purchases of Remedies Plus are processed by **Apple**. The App confirms a purchase with Apple on the
+device. The Developer receives from Apple only the sales reports Apple provides to every developer,
+which do not identify the purchaser; the Developer does not receive the purchaser's name, payment
+card details or billing address. Apple's processing of that data is governed by Apple's privacy
+policy.
 
 ## 10. Children
 

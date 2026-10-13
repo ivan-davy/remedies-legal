@@ -8,13 +8,13 @@ lang: en
 # Medical Disclaimer
 
 **Effective date:** 16 August 2026
-**Last updated:** 26 September 2026
+**Last updated:** 8 October 2026
 
 
 ---
 
 
-Remedies helps you keep track of the medicines you already have. Please read this before you rely on it.
+Remedies helps you keep track of the medicines, supplements, supplies and equipment you have at home. Please read this before you rely on it.
 
 ## Not a medical device
 
@@ -24,9 +24,9 @@ Remedies organises and reminds. It does not diagnose, treat or prevent anything,
 
 Nothing in the app is medical or pharmaceutical advice. Ask a doctor or pharmacist about doses, interactions, side effects and whether a medicine suits you.
 
-## Only what you entered
+## Check what it fills in
 
-Remedies shows the information you typed in or scanned. It does not check names, strengths, doses or expiry dates against any source. Read the packaging or the leaflet before taking anything.
+Remedies shows what you typed in or scanned, and what it suggests from its own list of names: active substances, a maker, labels. None of it is checked against any official source, so names, substances, strengths, doses and expiry dates can be wrong. Read the packaging or the leaflet before taking anything.
 
 ## Reminders can be late or missed
 

@@ -8,7 +8,7 @@ lang: en
 # Medical Disclaimer
 
 **Effective date:** 16 August 2026
-**Last updated:** 8 October 2026
+**Last updated:** 17 October 2026
 
 
 ---
@@ -26,7 +26,7 @@ Nothing in the app is medical or pharmaceutical advice. Ask a doctor or pharmaci
 
 ## Check what it fills in
 
-Remedies shows what you typed in or scanned, and what it suggests from its own list of names: active substances, a maker, labels. None of it is checked against any official source, so names, substances, strengths, doses and expiry dates can be wrong. Read the packaging or the leaflet before taking anything.
+Remedies shows what you typed in or scanned. From its own lists it suggests names, active substances and makers, and each suggestion fills in only its own field. It also offers labels you can add and shows a substance’s ATC code. None of it is checked against any official source, so names, substances, strengths, doses and expiry dates can be wrong. Read the packaging or the leaflet before taking anything.
 
 ## Reminders can be late or missed
 

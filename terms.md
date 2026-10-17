@@ -8,7 +8,7 @@ lang: en
 # Terms of Use
 
 **Effective date:** 16 August 2026
-**Last updated:** 13 October 2026
+**Last updated:** 17 October 2026
 
 
 ---
@@ -36,8 +36,8 @@ acknowledged before the App can be used.
   Questions about doses, interactions, side effects and the suitability of a medicine should be
   directed to a doctor or pharmacist.
 - **No verification.** The App displays information entered or scanned by the user. To save
-  typing, it also suggests names from a list bundled with it: choosing one fills in that product's
-  active substances, manufacturer and, where it has only one, its form. It also suggests labels for
+  typing, it also suggests names, active substances and manufacturers from lists bundled with it,
+  and each suggestion fills in only its own field. It further suggests labels for
   what a substance, or a kind of supply or equipment, is commonly used for, and shows a
   classification code for a medicine's substance. These suggestions are compiled without
   verification against any official register and may be wrong, incomplete or out of date, and

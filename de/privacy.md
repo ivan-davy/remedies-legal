@@ -8,7 +8,7 @@ lang: de
 # Datenschutzerklärung
 
 **Gültig ab:** 16. August 2026
-**Zuletzt aktualisiert:** 12. Oktober 2026
+**Zuletzt aktualisiert:** 26. Oktober 2026
 
 
 Diese Übersetzung dient Ihrer Information. Maßgeblich ist die
@@ -97,7 +97,8 @@ wird an den Entwickler übermittelt.
 | Fotos von Verpackungen, vom Gegenstand selbst und von seiner Packungsbeilage oder Anleitung | Verschlüsselte Dateien im privaten Speicher der App |
 | Erinnerungseinstellungen und der Erinnerungsverlauf in der App | Verschlüsselter App-Speicher |
 | Sprache, Design und andere Einstellungen sowie die letzten Suchanfragen | Verschlüsselter App-Speicher |
-| Ob Remedies Plus gekauft wurde (eine Kopie, damit die App offline funktioniert), und die Zahl der Smart-Scan-Nutzungen im laufenden Monat | Verschlüsselter App-Speicher |
+| Ob Remedies Plus gekauft wurde (eine Kopie, damit die App offline funktioniert), und die Zahl der kostenlosen Nutzungen von Smart Scan und Ausfüllen aus dem Register in diesem Monat | Verschlüsselter App-Speicher |
+| Ein Verzeichnis von Arzneimitteln aus einem öffentlichen Register (für die Vereinigten Staaten das National Drug Code Directory der FDA), für alle Nutzer gleich und mit der App geliefert; es enthält keine personenbezogenen Daten | Die eigenen Dateien der App |
 
 **Verschlüsselung.** Die Daten werden mit einem Schlüssel verschlüsselt, der auf dem Gerät erzeugt
 und im iOS-Schlüsselbund gespeichert wird. Die App übermittelt den Schlüssel nie, und er ist für den
@@ -124,7 +125,9 @@ exportieren (siehe Abschnitt 8).
 Die App fragt die folgenden Berechtigungen nur an, wenn eine Funktion genutzt wird, die sie
 benötigt:
 
-- **Kamera**: um einen Gegenstand, seine Verpackung oder seine Packungsbeilage zu fotografieren.
+- **Kamera**: um einen Gegenstand, seine Verpackung oder seine Packungsbeilage zu fotografieren und
+  den Strichcode einer Packung zu lesen, während die Kamera auf sie gerichtet ist. Dieses Livebild wird
+  auf dem Gerät gelesen und nicht gespeichert.
 - **Fotomediathek, „Nur hinzufügen“**: um auf Wunsch des Nutzers ein Foto aus der App in der
   Fotomediathek zu sichern.
 
@@ -137,6 +140,11 @@ verschlüsselten Speicher der App abgelegt und nicht hochgeladen.
 Die Texterkennung auf Verpackungen und Packungsbeilagen erfolgt **vollständig auf dem Gerät**, mit
 Apples Texterkennung und Apples Sprachmodell auf dem Gerät. Weder das Bild noch der erkannte Text
 verlässt das Gerät, und keines von beiden wird an den Entwickler oder an Dritte gesendet.
+
+**Ausfüllen aus dem Register.** Die App durchsucht das mit ihr gelieferte Arzneimittelregister
+(Abschnitt 4) auf dem Gerät und übernimmt das vom Nutzer gewählte Produkt in den neu angelegten
+Eintrag. Der eingegebene Name und das gewählte Produkt werden weder an den Entwickler noch an Dritte
+gesendet.
 
 ## 7. Erinnerungen
 
@@ -162,8 +170,8 @@ direkt in der App ausgeübt:
 - **Löschung.** Einstellungen → Zurücksetzen → *App zurücksetzen* löscht alles, was die App auf dem
   Gerät speichert: die Einträge, Fotos, Kuren, das Journal, die Sammlungen, die Einstellungen und
   die Arbeitskopien in ihrem Cache. Zwei Dinge bleiben erhalten: der Kauf von Remedies Plus, den
-  Apple verwaltet, und die Zahl der Smart-Scan-Nutzungen im laufenden Monat, damit ein Zurücksetzen
-  keine kostenlosen Scans zurückbringt. Auch das Löschen der App entfernt ihre Daten vom Gerät; der
+  Apple verwaltet, und die Zahl der kostenlosen Nutzungen von Smart Scan und Ausfüllen aus dem Register
+  in diesem Monat, damit ein Zurücksetzen sie nicht zurückbringt. Auch das Löschen der App entfernt ihre Daten vom Gerät; der
   Schlüssel bleibt im iOS-Schlüsselbund, wo er nichts mehr entschlüsseln kann, sobald die Daten
   gelöscht sind. Der Entwickler besitzt keine Kopie. Kopien in Gerätebackups oder exportierten
   Archiven bleiben unter der Kontrolle des Nutzers.

@@ -8,7 +8,7 @@ lang: en
 # Privacy Policy
 
 **Effective date:** 16 August 2026
-**Last updated:** 12 October 2026
+**Last updated:** 26 October 2026
 
 
 ---
@@ -91,7 +91,8 @@ Developer.
 | Photographs of packaging, of the item itself and of its leaflet or instructions | Encrypted files in the App's private storage |
 | Reminder settings and the in-app reminder history | Encrypted app storage |
 | Language, theme and other preferences, and recent searches | Encrypted app storage |
-| Whether Remedies Plus has been purchased (a copy kept so the App works offline) and the count of Smart Scan uses in the current month | Encrypted app storage |
+| Whether Remedies Plus has been purchased (a copy kept so the App works offline) and the count of free uses of Smart Scan and Register Fill this month | Encrypted app storage |
+| A reference list of medicines from a public register (for the United States, the FDA's National Drug Code Directory), the same for every user and supplied with the App; it holds no personal data | The App's own files |
 
 **Encryption.** The data is encrypted with a key that is generated on the device and stored in the
 iOS Keychain. The App never transmits the key, and it is not accessible to the Developer. iOS
@@ -115,7 +116,8 @@ backup or export the data (see Section 8).
 
 The App requests the following permissions only when a feature that requires them is used:
 
-- **Camera** — to photograph an item, its packaging or its leaflet.
+- **Camera** — to photograph an item, its packaging or its leaflet, and to read a pack's barcode
+  while the camera is pointed at it. That live view is read on the device and not stored.
 - **Photo library, "add only"** — to save a photograph from the App to the photo library, at the
   user's request.
 
@@ -128,6 +130,10 @@ encrypted storage and are not uploaded.
 Text recognition on packaging and leaflets is performed **entirely on the device**, using Apple's
 on-device text recognition and on-device language model. Neither the image nor the recognised text
 leaves the device, and neither is sent to the Developer or to any third party.
+
+**Register Fill.** The App searches the register of medicines supplied with it (Section 4) on the
+device and copies the product the user chooses into the record being added. The name typed and the
+product chosen are not sent to the Developer or to any third party.
 
 ## 7. Reminders
 
@@ -152,7 +158,7 @@ directly in the App:
 - **Erasure.** Settings → Reset → *Reset the app* deletes everything the App holds on the device:
   the records, photographs, courses, journal, collections, settings and the working copies in its
   cache. Two things are kept: the purchase of Remedies Plus, which Apple holds, and the count of
-  Smart Scan uses in the current month, so that a reset does not restore free scans. Deleting the
+  free uses of Smart Scan and Register Fill this month, so that a reset does not restore them. Deleting the
   App also
   removes its data from the device; the encryption key remains in the iOS Keychain, where it can
   decrypt nothing once the data is gone. The Developer holds no copy. Copies in device backups or

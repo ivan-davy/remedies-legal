@@ -98,7 +98,7 @@ wird an den Entwickler übermittelt.
 | Erinnerungseinstellungen und der Erinnerungsverlauf in der App | Verschlüsselter App-Speicher |
 | Sprache, Design und andere Einstellungen sowie die letzten Suchanfragen | Verschlüsselter App-Speicher |
 | Ob Remedies Plus gekauft wurde (eine Kopie, damit die App offline funktioniert), und die Zahl der kostenlosen Nutzungen von Smart Scan und Ausfüllen aus dem Register in diesem Monat | Verschlüsselter App-Speicher |
-| Ein Verzeichnis von Arzneimitteln aus einem öffentlichen Register (für die Vereinigten Staaten das National Drug Code Directory der FDA), für alle Nutzer gleich und mit der App geliefert; es enthält keine personenbezogenen Daten | Die eigenen Dateien der App |
+| Ein Verzeichnis von Arzneimitteln aus öffentlichen Registern (für die Vereinigten Staaten das National Drug Code Directory der FDA; für Italien die offenen Daten der italienischen Arzneimittelbehörde AIFA), für alle Nutzer gleich und mit der App geliefert; es enthält keine personenbezogenen Daten | Die eigenen Dateien der App |
 
 **Verschlüsselung.** Die Daten werden mit einem Schlüssel verschlüsselt, der auf dem Gerät erzeugt
 und im iOS-Schlüsselbund gespeichert wird. Die App übermittelt den Schlüssel nie, und er ist für den

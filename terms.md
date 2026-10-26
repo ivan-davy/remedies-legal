@@ -42,8 +42,9 @@ acknowledged before the App can be used.
   classification code for a medicine's substance. These suggestions are compiled without
   verification against any official register and may be wrong, incomplete or out of date, and
   nothing is filled in without the user choosing it.
-- **Register Fill.** The App also holds a copy of a public medicines register: for the United States,
-  the National Drug Code Directory of the U.S. Food and Drug Administration (the "FDA"). When the
+- **Register Fill.** The App also holds copies of public medicines registers: for the United States,
+  the National Drug Code Directory of the U.S. Food and Drug Administration (the "FDA"), and for
+  Italy, the open data of the Italian Medicines Agency (Agenzia Italiana del Farmaco, "AIFA"). When the
   user chooses one of its products, the App fills in that product's name, manufacturer, active
   substances and strengths (for a supply, its kind), form, routes, unit, package code and package
   size, replacing those fields in the record being added (of its codes, only the package code), and
@@ -54,10 +55,11 @@ acknowledged before the App can be used.
   register is taken from its source and adapted by the Developer: names are re-cased, substances
   are spelt as the App spells them, the substance with the largest strength is put first, products are sorted into the App's forms
   and units, some products are left out, and a few listed values are corrected against the
-  product's label. Neither the register nor these changes are verified, and a product's details may
+  product's label; an Italian product's packages are grouped by form and presentation, and its
+  strength is read from the package description. Neither the register nor these changes are verified, and a product's details may
   be out of date, incomplete or wrong. The values are copied once, can be changed by the user before
-  the record is saved, and are not changed by a later version of the register. The FDA has not
-  reviewed or endorsed the App.
+  the record is saved, and are not changed by a later version of the register. Neither the FDA nor
+  AIFA has reviewed or endorsed the App.
   The App does not verify names, active substances, strengths, doses or expiry dates against any
   source. The packaging or patient leaflet must be consulted before any medicine is taken.
 - **Not suitable for time-critical doses.** Reminders are standard iOS notifications. iOS may delay

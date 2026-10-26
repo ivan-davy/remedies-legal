@@ -92,7 +92,7 @@ Developer.
 | Reminder settings and the in-app reminder history | Encrypted app storage |
 | Language, theme and other preferences, and recent searches | Encrypted app storage |
 | Whether Remedies Plus has been purchased (a copy kept so the App works offline) and the count of free uses of Smart Scan and Register Fill this month | Encrypted app storage |
-| A reference list of medicines from a public register (for the United States, the FDA's National Drug Code Directory), the same for every user and supplied with the App; it holds no personal data | The App's own files |
+| A reference list of medicines from public registers (for the United States, the FDA's National Drug Code Directory; for Italy, the open data of the Italian Medicines Agency, AIFA), the same for every user and supplied with the App; it holds no personal data | The App's own files |
 
 **Encryption.** The data is encrypted with a key that is generated on the device and stored in the
 iOS Keychain. The App never transmits the key, and it is not accessible to the Developer. iOS

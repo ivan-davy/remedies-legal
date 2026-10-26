@@ -46,13 +46,13 @@ acknowledged before the App can be used.
   the National Drug Code Directory of the U.S. Food and Drug Administration (the "FDA"). When the
   user chooses one of its products, the App fills in that product's name, manufacturer, active
   substances and strengths (for a supply, its kind), form, routes, unit, package code and package
-  size, replacing those fields in the record being added, and it may change the record between a
-  medicine and a supply. A strength the chosen form cannot hold is put into the record's notes. The
-  main fields (name, manufacturer, substances and strengths, form or kind, and package code) are
-  marked, and the record is saved only once the user has confirmed each of them. A pack scanned
+  size, replacing those fields in the record being added (of its codes, only the package code), and
+  it may change the record between a medicine and a supply. The main fields (name, manufacturer,
+  substances and strengths, form or kind, and package code) are marked for the user to check and
+  confirm, and the form asks for that confirmation before the record is saved. A pack scanned
   with Smart Scan whose barcode the register lists opens that product for the user to choose. The
   register is taken from its source and adapted by the Developer: names are re-cased, substances
-  are spelt as the App spells them and ordered by strength, products are sorted into the App's forms
+  are spelt as the App spells them, the substance with the largest strength is put first, products are sorted into the App's forms
   and units, some products are left out, and a few listed values are corrected against the
   product's label. Neither the register nor these changes are verified, and a product's details may
   be out of date, incomplete or wrong. The values are copied once, can be changed by the user before

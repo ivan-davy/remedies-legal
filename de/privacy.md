@@ -126,8 +126,8 @@ Die App fragt die folgenden Berechtigungen nur an, wenn eine Funktion genutzt wi
 benötigt:
 
 - **Kamera**: um einen Gegenstand, seine Verpackung oder seine Packungsbeilage zu fotografieren und
-  den Strichcode einer Packung zu lesen, während die Kamera auf sie gerichtet ist. Dieses Livebild wird
-  auf dem Gerät gelesen und nicht gespeichert.
+  den Barcode einer Packung zu lesen, während die Kamera auf sie gerichtet ist. Dieses Livebild wird
+  auf dem Gerät ausgewertet und nicht gespeichert.
 - **Fotomediathek, „Nur hinzufügen“**: um auf Wunsch des Nutzers ein Foto aus der App in der
   Fotomediathek zu sichern.
 

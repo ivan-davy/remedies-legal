@@ -55,8 +55,9 @@ acknowledged before the App can be used.
   register is taken from its source and adapted by the Developer: names are re-cased, substances
   are spelt as the App spells them, the substance with the largest strength is put first, products are sorted into the App's forms
   and units, some products are left out, and a few listed values are corrected against the
-  product's label; an Italian product's packages are grouped by form and presentation, and its
-  strength is read from the package description. Neither the register nor these changes are verified, and a product's details may
+  product's label; an Italian product's packages are grouped by form and strength, and its
+  strength is read from the package description, or from AIFA's own figure where the description
+  gives none. Neither the register nor these changes are verified, and a product's details may
   be out of date, incomplete or wrong. The values are copied once, can be changed by the user before
   the record is saved, and are not changed by a later version of the register. Neither the FDA nor
   AIFA has reviewed or endorsed the App.

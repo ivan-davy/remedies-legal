@@ -8,7 +8,7 @@ lang: de
 # Datenschutzerklärung
 
 **Gültig ab:** 16. August 2026
-**Zuletzt aktualisiert:** 9. November 2026
+**Zuletzt aktualisiert:** 2. November 2026
 
 
 Diese Übersetzung dient Ihrer Information. Maßgeblich ist die
@@ -91,7 +91,7 @@ wird an den Entwickler übermittelt.
 
 | Kategorie | Speicherung |
 | --- | --- |
-| Einträge zu Medikamenten, Nahrungsergänzungsmitteln, Verbrauchsmaterial und Geräten: Namen, Wirkstoffe, Wirkstärken, Darreichungsformen, Mengen, Verfallsdaten, Chargen- und Seriennummern, Aufbewahrungsorte, Etiketten, Notizen und die aus einer Packungsbeilage übernommenen Angaben | Verschlüsselter App-Speicher |
+| Einträge zu Medikamenten, Nahrungsergänzungsmitteln, Verbrauchsmaterial und Geräten: Namen, Wirkstoffe, Wirkstärken, Darreichungsformen, Mengen, Verfallsdaten, Aufbewahrungsorte, Etiketten, Notizen und die aus einer Packungsbeilage übernommenen Angaben | Verschlüsselter App-Speicher |
 | Sammlungen (die Orte, an denen Dinge aufbewahrt werden) | Verschlüsselter App-Speicher |
 | Kuren, Zeitpläne und das Journal der eingenommenen und ausgelassenen Dosen | Verschlüsselter App-Speicher |
 | Fotos von Verpackungen, vom Gegenstand selbst und von seiner Packungsbeilage oder Anleitung | Verschlüsselte Dateien im privaten Speicher der App |

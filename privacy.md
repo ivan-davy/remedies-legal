@@ -8,7 +8,7 @@ lang: en
 # Privacy Policy
 
 **Effective date:** 16 August 2026
-**Last updated:** 9 November 2026
+**Last updated:** 2 November 2026
 
 
 ---
@@ -85,7 +85,7 @@ Developer.
 
 | Category | Storage |
 | --- | --- |
-| Records of medicines, food supplements, medical supplies and equipment: names, active substances, strengths, forms, quantities, expiry dates, batch and serial numbers, where each is kept, labels, notes, and the details taken from a patient leaflet | Encrypted app storage |
+| Records of medicines, food supplements, medical supplies and equipment: names, active substances, strengths, forms, quantities, expiry dates, where each is kept, labels, notes, and the details taken from a patient leaflet | Encrypted app storage |
 | Collections (the places items are kept) | Encrypted app storage |
 | Courses, schedules and the journal of taken and skipped doses | Encrypted app storage |
 | Photographs of packaging, of the item itself and of its leaflet or instructions | Encrypted files in the App's private storage |

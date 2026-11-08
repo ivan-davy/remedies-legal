@@ -8,7 +8,7 @@ lang: de
 # Datenschutzerklärung
 
 **Gültig ab:** 16. August 2026
-**Zuletzt aktualisiert:** 26. Oktober 2026
+**Zuletzt aktualisiert:** 9. November 2026
 
 
 Diese Übersetzung dient Ihrer Information. Maßgeblich ist die
@@ -75,7 +75,7 @@ Die einzige Netzwerkaktivität im Zusammenhang mit der App ist:
 - der In-App-Kauf über Apple (siehe Abschnitt 9);
 - Webseiten, die der Nutzer aus der App heraus öffnet und die in Safari innerhalb der App angezeigt
   werden: diese Rechtstexte (auf GitHub Pages), die Ideen-Seite unter remedies.fider.io (betrieben
-  von Fider) und eine Support-Seite von Apple. Für jede gilt die Datenschutzerklärung der Website,
+  von Fider), eine Support-Seite von Apple und die in den Registerhinweisen verlinkten offiziellen Quellen. Für jede gilt die Datenschutzerklärung der Website,
   die sie ausliefert, und die App übermittelt ihr nichts über den Nutzer;
 - E-Mails, die der Nutzer aus der App heraus schreibt und die in seiner eigenen Mail-App an den
   Entwickler adressiert geöffnet werden. Eine Feedback-E-Mail ist unterhalb des Platzes für die
@@ -91,14 +91,14 @@ wird an den Entwickler übermittelt.
 
 | Kategorie | Speicherung |
 | --- | --- |
-| Einträge zu Medikamenten, Nahrungsergänzungsmitteln, Verbrauchsmaterial und Geräten: Namen, Wirkstoffe, Wirkstärken, Darreichungsformen, Mengen, Verfallsdaten, Aufbewahrungsorte, Etiketten, Notizen und die aus einer Packungsbeilage übernommenen Angaben | Verschlüsselter App-Speicher |
+| Einträge zu Medikamenten, Nahrungsergänzungsmitteln, Verbrauchsmaterial und Geräten: Namen, Wirkstoffe, Wirkstärken, Darreichungsformen, Mengen, Verfallsdaten, Chargen- und Seriennummern, Aufbewahrungsorte, Etiketten, Notizen und die aus einer Packungsbeilage übernommenen Angaben | Verschlüsselter App-Speicher |
 | Sammlungen (die Orte, an denen Dinge aufbewahrt werden) | Verschlüsselter App-Speicher |
 | Kuren, Zeitpläne und das Journal der eingenommenen und ausgelassenen Dosen | Verschlüsselter App-Speicher |
 | Fotos von Verpackungen, vom Gegenstand selbst und von seiner Packungsbeilage oder Anleitung | Verschlüsselte Dateien im privaten Speicher der App |
 | Erinnerungseinstellungen und der Erinnerungsverlauf in der App | Verschlüsselter App-Speicher |
 | Sprache, Design und andere Einstellungen sowie die letzten Suchanfragen | Verschlüsselter App-Speicher |
 | Ob Remedies Plus gekauft wurde (eine Kopie, damit die App offline funktioniert), und die Zahl der kostenlosen Nutzungen von Smart Scan und Ausfüllen aus dem Register in diesem Monat | Verschlüsselter App-Speicher |
-| Ein Verzeichnis von Arzneimitteln aus öffentlichen Registern (für die Vereinigten Staaten das National Drug Code Directory der FDA; für Italien die offenen Daten der italienischen Arzneimittelbehörde AIFA), für alle Nutzer gleich und mit der App geliefert; es enthält keine personenbezogenen Daten | Die eigenen Dateien der App |
+| Ein Verzeichnis von Arzneimitteln aus öffentlichen Registern (für die Vereinigten Staaten das National Drug Code Directory der FDA; für Italien die offenen Daten der italienischen Arzneimittelbehörde AIFA; für Frankreich die öffentliche Arzneimitteldatenbank Base de données publique des médicaments, BDPM; für Spanien das Verschreibungsverzeichnis (Nomenclátor de prescripción) der spanischen Arzneimittelagentur AEMPS; für die Schweiz die Open Government Data von Swissmedic; für Kanada die Drug Product Database, DPD, von Health Canada; für die Ukraine das staatliche Arzneimittelregister des Gesundheitsministeriums, DRLZ, von data.gov.ua; für Polen das Register der Arzneimittel, RPL, von dane.gov.pl; für das Vereinigte Königreich das NHS Dictionary of Medicines and Devices, dm+d, von NHS TRUD), für alle Nutzer gleich und mit der App geliefert; es enthält keine personenbezogenen Daten | Die eigenen Dateien der App |
 
 **Verschlüsselung.** Die Daten werden mit einem Schlüssel verschlüsselt, der auf dem Gerät erzeugt
 und im iOS-Schlüsselbund gespeichert wird. Die App übermittelt den Schlüssel nie, und er ist für den
@@ -107,7 +107,11 @@ Entwickler nicht zugänglich. iOS nimmt ihn in Gerätebackups auf, wie unten bes
 **Arbeitskopien.** Um ein Foto anzuzeigen, braucht iOS es entschlüsselt; die App hält deshalb eine
 begrenzte Zahl entschlüsselter Kopien in ihrem Cache-Verzeichnis, und das Löschen eines Eintrags
 löscht seine Kopien. In der App aufgenommene oder ausgewählte Fotos durchlaufen den Cache, bevor sie
-verschlüsselt werden; diese Kopien werden beim nächsten Start der App gelöscht. Auch das zuletzt
+verschlüsselt werden; diese Kopien werden beim nächsten Start gelöscht, bei dem die App ihre
+Einträge lesen kann; solange die Einträge gesperrt sind (die App ihren Schlüssel nicht lesen kann),
+bleiben sie bis zu einem späteren Start. Ein Foto wird nie
+unverschlüsselt gespeichert: Eines, das sich nicht verschlüsseln lässt (etwa weil der Gerätespeicher
+voll ist), wird nicht aufbewahrt, und die App bittet darum, es erneut hinzuzufügen. Auch das zuletzt
 exportierte Archiv (Abschnitt 8) bleibt bis zum nächsten Export im Cache. Der Cache gehört zum
 privaten Speicher der App, ist nicht Teil von Gerätebackups und wird durch *App zurücksetzen*
 (Abschnitt 8) geleert.
@@ -171,9 +175,9 @@ direkt in der App ausgeübt:
   Gerät speichert: die Einträge, Fotos, Kuren, das Journal, die Sammlungen, die Einstellungen und
   die Arbeitskopien in ihrem Cache. Zwei Dinge bleiben erhalten: der Kauf von Remedies Plus, den
   Apple verwaltet, und die Zahl der kostenlosen Nutzungen von Smart Scan und Ausfüllen aus dem Register
-  in diesem Monat, damit ein Zurücksetzen sie nicht zurückbringt. Auch das Löschen der App entfernt ihre Daten vom Gerät; der
-  Schlüssel bleibt im iOS-Schlüsselbund, wo er nichts mehr entschlüsseln kann, sobald die Daten
-  gelöscht sind. Der Entwickler besitzt keine Kopie. Kopien in Gerätebackups oder exportierten
+  in diesem Monat, damit ein Zurücksetzen sie nicht zurückbringt. Auch das Löschen der App entfernt ihre Daten vom
+  Gerät. In beiden Fällen bleibt der Verschlüsselungsschlüssel im iOS-Schlüsselbund, wo er nichts
+  mehr entschlüsseln kann, sobald die Daten gelöscht sind. Der Entwickler besitzt keine Kopie. Kopien in Gerätebackups oder exportierten
   Archiven bleiben unter der Kontrolle des Nutzers.
 - **Berichtigung.** Jeder Eintrag kann in der App bearbeitet werden. Die Fotos gelöschter Einträge
   werden beim nächsten Start der App gelöscht, sofern sie dann überhaupt Einträge enthält; bis dahin

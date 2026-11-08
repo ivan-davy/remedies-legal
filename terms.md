@@ -8,7 +8,7 @@ lang: en
 # Terms of Use
 
 **Effective date:** 16 August 2026
-**Last updated:** 26 October 2026
+**Last updated:** 2 November 2026
 
 
 ---
@@ -44,23 +44,26 @@ acknowledged before the App can be used.
   nothing is filled in without the user choosing it.
 - **Register Fill.** The App also holds copies of public medicines registers: for the United States,
   the National Drug Code Directory of the U.S. Food and Drug Administration (the "FDA"), and for
-  Italy, the open data of the Italian Medicines Agency (Agenzia Italiana del Farmaco, "AIFA"). When the
+  Italy, the open data of the Italian Medicines Agency (Agenzia Italiana del Farmaco, "AIFA"); and for
+  France, the Base de données publique des médicaments ("BDPM"), produced by ANSM, HAS and Assurance Maladie; and for Spain, the prescription nomenclator of the Spanish Agency of
+  Medicines and Medical Devices ("AEMPS"); and for Switzerland, Swissmedic’s Open Government Data; and for Canada, Health Canada’s Drug Product Database ("DPD"); and for Ukraine, the Ministry of Health’s State Register of Medicines ("DRLZ"), from data.gov.ua; and for Poland, the Register of Medicinal Products ("RPL") kept by the Office for Registration of Medicinal Products, Medical Devices and Biocidal Products, from dane.gov.pl, as of the date shown in About → Licences; and for the United Kingdom, the NHS Dictionary of Medicines and Devices ("dm+d") of the NHS Business Services Authority, from NHS TRUD, containing public sector information licensed under the Open Government Licence v3.0. When the
   user chooses one of its products, the App fills in that product's name, manufacturer, active
   substances and strengths (for a supply, its kind), form, routes, unit, package code and package
   size, replacing those fields in the record being added (of its codes, only the package code), and
-  it may change the record between a medicine and a supply. The main fields (name, manufacturer,
+  it may change the record between a medicine and a supply. DPD supplies one entry per DIN and DRLZ one per registration certificate, identifiers shared by pack sizes; a DPD package size must be entered by the user, and a DRLZ one is filled only where the certificate names a single pack. The main fields (name, manufacturer,
   substances and strengths, form or kind, and package code) are marked for the user to check and
   confirm, and the form asks for that confirmation before the record is saved. A pack scanned
   with Smart Scan whose barcode the register lists opens that product for the user to choose. The
-  register is taken from its source and adapted by the Developer: names are re-cased, substances
-  are spelt as the App spells them, the substance with the largest strength is put first, products are sorted into the App's forms
+  register is taken from its source and adapted by the Developer: names and substance names are taken out of their capitals, the substance with the largest strength is put first, products are sorted into the App's forms
   and units, some products are left out, and a few listed values are corrected against the
   product's label; an Italian product's packages are grouped by form and strength, and its
   strength is read from the package description, or from AIFA's own figure where the description
-  gives none. Neither the register nor these changes are verified, and a product's details may
+  gives none. French composition rows are linked by pharmaceutical element and substance link;
+  where the register lists an active substance and a therapeutic fraction, a strength is copied
+  only if the product name identifies one of those rows unambiguously. Neither the register nor these changes are verified, and a product's details may
   be out of date, incomplete or wrong. The values are copied once, can be changed by the user before
-  the record is saved, and are not changed by a later version of the register. Neither the FDA nor
-  AIFA has reviewed or endorsed the App.
+  the record is saved, and are not changed by a later version of the register. The FDA, AIFA, ANSM, HAS, Assurance Maladie, AEMPS, Swissmedic, Health Canada, the Ministry of Health of Ukraine, the Office for Registration of Medicinal Products, Medical Devices and Biocidal Products, the NHS Business Services Authority and NHS England have neither reviewed nor
+  endorsed the App.
   The App does not verify names, active substances, strengths, doses or expiry dates against any
   source. The packaging or patient leaflet must be consulted before any medicine is taken.
 - **Not suitable for time-critical doses.** Reminders are standard iOS notifications. iOS may delay

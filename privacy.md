@@ -8,7 +8,7 @@ lang: en
 # Privacy Policy
 
 **Effective date:** 16 August 2026
-**Last updated:** 26 October 2026
+**Last updated:** 9 November 2026
 
 
 ---
@@ -68,8 +68,8 @@ The only network activity associated with the App is:
 
 - Apple's in-app purchase flow (see Section 9);
 - web pages the user chooses to open from the App, shown in Safari inside the App: these legal
-  documents (on GitHub Pages), the ideas board at remedies.fider.io (run by Fider), and an Apple
-  support page. Each is subject to the privacy policy of the site that serves it, and the App sends
+  documents (on GitHub Pages), the ideas board at remedies.fider.io (run by Fider), an Apple
+  support page and the official sources linked in the register credits. Each is subject to the privacy policy of the site that serves it, and the App sends
   it nothing about the user;
 - emails the user chooses to write from the App, which open in the user's own mail app addressed
   to the Developer. A feedback email is pre-filled, below the space for the user's message, with
@@ -85,14 +85,14 @@ Developer.
 
 | Category | Storage |
 | --- | --- |
-| Records of medicines, food supplements, medical supplies and equipment: names, active substances, strengths, forms, quantities, expiry dates, where each is kept, labels, notes, and the details taken from a patient leaflet | Encrypted app storage |
+| Records of medicines, food supplements, medical supplies and equipment: names, active substances, strengths, forms, quantities, expiry dates, batch and serial numbers, where each is kept, labels, notes, and the details taken from a patient leaflet | Encrypted app storage |
 | Collections (the places items are kept) | Encrypted app storage |
 | Courses, schedules and the journal of taken and skipped doses | Encrypted app storage |
 | Photographs of packaging, of the item itself and of its leaflet or instructions | Encrypted files in the App's private storage |
 | Reminder settings and the in-app reminder history | Encrypted app storage |
 | Language, theme and other preferences, and recent searches | Encrypted app storage |
 | Whether Remedies Plus has been purchased (a copy kept so the App works offline) and the count of free uses of Smart Scan and Register Fill this month | Encrypted app storage |
-| A reference list of medicines from public registers (for the United States, the FDA's National Drug Code Directory; for Italy, the open data of the Italian Medicines Agency, AIFA), the same for every user and supplied with the App; it holds no personal data | The App's own files |
+| A reference list of medicines from public registers (for the United States, the FDA's National Drug Code Directory; for Italy, the open data of the Italian Medicines Agency, AIFA; for France, the Base de données publique des médicaments, BDPM; for Spain, the prescription nomenclator of the Spanish Agency of Medicines and Medical Devices, AEMPS; for Switzerland, Swissmedic’s Open Government Data; for Canada, Health Canada’s Drug Product Database, DPD; for Ukraine, the Ministry of Health’s State Register of Medicines, DRLZ, from data.gov.ua; for Poland, the Register of Medicinal Products, RPL, from dane.gov.pl; for the United Kingdom, the NHS Dictionary of Medicines and Devices, dm+d, from NHS TRUD), the same for every user and supplied with the App; it holds no personal data | The App's own files |
 
 **Encryption.** The data is encrypted with a key that is generated on the device and stored in the
 iOS Keychain. The App never transmits the key, and it is not accessible to the Developer. iOS
@@ -101,7 +101,9 @@ includes it in device backups, as described below.
 **Working copies.** To show a photograph, iOS needs it decrypted, so the App keeps a limited number of
 decrypted copies in its cache directory; deleting a record deletes its copies. Photographs taken or
 chosen in the App pass through the cache before they are encrypted, and those copies are deleted the
-next time the App starts. The last exported archive (Section 8) also stays in the cache until the
+next time the App starts with its records readable; while the records are locked (the App cannot
+read its key), they wait for a later start. A photograph is never stored unencrypted: one that cannot be encrypted (for
+example, when the device is out of space) is not kept, and the App asks for it again. The last exported archive (Section 8) also stays in the cache until the
 next export. The cache is part of the App's private storage, is not included in device backups, and
 is cleared by *Reset the app* (Section 8).
 
@@ -158,10 +160,9 @@ directly in the App:
 - **Erasure.** Settings → Reset → *Reset the app* deletes everything the App holds on the device:
   the records, photographs, courses, journal, collections, settings and the working copies in its
   cache. Two things are kept: the purchase of Remedies Plus, which Apple holds, and the count of
-  free uses of Smart Scan and Register Fill this month, so that a reset does not restore them. Deleting the
-  App also
-  removes its data from the device; the encryption key remains in the iOS Keychain, where it can
-  decrypt nothing once the data is gone. The Developer holds no copy. Copies in device backups or
+  free uses of Smart Scan and Register Fill this month, so that a reset does not restore them. Deleting the App also
+  removes its data from the device. After either, the encryption key remains in the iOS Keychain,
+  where it can decrypt nothing once the data is gone. The Developer holds no copy. Copies in device backups or
   exported archives remain under the user's control.
 - **Rectification.** Any record can be edited in the App. The photographs of deleted
   records are deleted when the App next starts, unless it then holds no records at all; until then

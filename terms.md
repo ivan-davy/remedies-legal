@@ -8,7 +8,7 @@ lang: en
 # Terms of Use
 
 **Effective date:** 16 August 2026
-**Last updated:** 2 November 2026
+**Last updated:** 10 November 2026
 
 
 ---
@@ -49,7 +49,7 @@ acknowledged before the App can be used.
   Medicines and Medical Devices ("AEMPS"); and for Switzerland, Swissmedic’s Open Government Data; and for Canada, Health Canada’s Drug Product Database ("DPD"); and for Ukraine, the Ministry of Health’s State Register of Medicines ("DRLZ"), from data.gov.ua; and for Poland, the Register of Medicinal Products ("RPL") kept by the Office for Registration of Medicinal Products, Medical Devices and Biocidal Products, from dane.gov.pl, as of the date shown in About → Licences; and for the United Kingdom, the NHS Dictionary of Medicines and Devices ("dm+d") of the NHS Business Services Authority, from NHS TRUD, containing public sector information licensed under the Open Government Licence v3.0. When the
   user chooses one of its products, the App fills in that product's name, manufacturer, active
   substances and strengths (for a supply, its kind), form, routes, unit, package code and package
-  size, replacing those fields in the record being added (of its codes, only the package code), and
+  size, replacing those fields in the record being added (of its codes, the code the register lists packs by replaces the record's code of that kind, except a barcode, which is added beside the user's; the pack's other codes, such as its ATC code or barcode, are added beside the user's), and
   it may change the record between a medicine and a supply. DPD supplies one entry per DIN and DRLZ one per registration certificate, identifiers shared by pack sizes; a DPD package size must be entered by the user, and a DRLZ one is filled only where the certificate names a single pack. The main fields (name, manufacturer,
   substances and strengths, form or kind, and package code) are marked for the user to check and
   confirm, and the form asks for that confirmation before the record is saved. A pack scanned

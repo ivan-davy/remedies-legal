@@ -8,7 +8,7 @@ lang: de
 # Datenschutzerklärung
 
 **Gültig ab:** 16. August 2026
-**Zuletzt aktualisiert:** 2. November 2026
+**Zuletzt aktualisiert:** 13. November 2026
 
 
 Diese Übersetzung dient Ihrer Information. Maßgeblich ist die
@@ -155,8 +155,10 @@ gesendet.
 Erinnerungen werden von iOS lokal geplant. Die App verwendet keinen Server für Push-Mitteilungen und
 hat keine Möglichkeit, Mitteilungen von außerhalb des Geräts zu senden. Welche Inhalte einer
 Erinnerung auf dem Sperrbildschirm erscheinen, legt der Nutzer fest; standardmäßig enthält eine
-Erinnerung den Namen des Medikaments **nicht**. Wählt der Nutzer, Namen anzuzeigen, enthält eine
-Erinnerung an eine einzelne Dosis auch das Foto des Gegenstands, sofern es eines gibt.
+Erinnerung den Namen des Medikaments **nicht** und auch sonst nichts darüber. Wählt der Nutzer, Namen
+anzuzeigen, zeigt eine Erinnerung außerdem, was der Nutzer beim Zeitplan gespeichert hat: die Menge, die
+Uhrzeit, die Art der Einnahme und was dafür benötigt wird; die Notiz zum Zeitplan erscheint erst, wenn
+die Erinnerung vollständig geöffnet wird. Eine Erinnerung enthält kein Foto.
 
 ## 8. Rechte der betroffenen Personen
 

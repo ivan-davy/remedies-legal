@@ -8,7 +8,7 @@ lang: en
 # Privacy Policy
 
 **Effective date:** 16 August 2026
-**Last updated:** 2 November 2026
+**Last updated:** 13 November 2026
 
 
 ---
@@ -141,9 +141,10 @@ product chosen are not sent to the Developer or to any third party.
 
 Reminders are scheduled locally by iOS. The App does not use a push-notification server and has no
 means of sending notifications from outside the device. The content of reminders shown on the lock
-screen is set by the user; by default, a reminder does **not** include the name of the medicine.
-When the user chooses to show names, a reminder about a single dose also carries the item's
-photograph, if it has one.
+screen is set by the user; by default, a reminder does **not** include the name of the medicine or
+anything else about it. When the user chooses to show names, a reminder also shows what the user saved
+with the schedule: the amount, the time, how it is taken and what it needs; the schedule's note appears
+only when the reminder is opened in full. A reminder carries no photograph.
 
 ## 8. Data subject rights
 

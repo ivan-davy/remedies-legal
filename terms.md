@@ -8,7 +8,7 @@ lang: en
 # Terms of Use
 
 **Effective date:** 16 August 2026
-**Last updated:** 10 November 2026
+**Last updated:** 12 November 2026
 
 
 ---
@@ -66,9 +66,9 @@ acknowledged before the App can be used.
   endorsed the App.
   The App does not verify names, active substances, strengths, doses or expiry dates against any
   source. The packaging or patient leaflet must be consulted before any medicine is taken.
-- **Not suitable for time-critical doses.** Reminders are standard iOS notifications. iOS may delay
-  or suppress them, and no reminders are delivered while the device is switched off. The App must
-  not be relied upon as the sole means of ensuring that a time-critical dose is taken.
+- **Reminders.** Reminders are standard notifications of the operating system, which may delay or
+  suppress them, and none are delivered while the device is switched off. Users should take
+  particular care with time-critical doses.
 - **Not for emergencies.** In an emergency, call your local emergency number.
 
 ## 3. User content

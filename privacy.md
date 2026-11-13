@@ -62,7 +62,8 @@ In particular, the App does **not**:
   party;
 - include analytics, attribution, advertising or crash-reporting software development kits;
 - track users across apps or websites, and for that reason does not request tracking permission;
-- access contacts, location, health records, the calendar or the microphone.
+- access contacts, location, the calendar or the microphone, or read any data from Apple Health
+  (what it can write there, at the user's request, is described in Section 4).
 
 The only network activity associated with the App is:
 
@@ -87,7 +88,7 @@ Developer.
 | --- | --- |
 | Records of medicines, food supplements, medical supplies and equipment: names, active substances, strengths, forms, quantities, expiry dates, where each is kept, labels, notes, and the details taken from a patient leaflet | Encrypted app storage |
 | Collections (the places items are kept) | Encrypted app storage |
-| Courses, schedules and the journal of taken and skipped doses | Encrypted app storage |
+| Courses, schedules, and the journal of taken and skipped doses and of the measurements the user records (such as body temperature or blood pressure) | Encrypted app storage |
 | Photographs of packaging, of the item itself and of its leaflet or instructions | Encrypted files in the App's private storage |
 | Reminder settings and the in-app reminder history | Encrypted app storage |
 | Language, theme and other preferences, and recent searches | Encrypted app storage |
@@ -113,6 +114,17 @@ data remains readable after a restore. An **unencrypted** computer backup does n
 Keychain items to a *different* device; if such a backup is restored to new hardware, the App's
 data will be unreadable. Before moving to a new device, the user should either use an encrypted
 backup or export the data (see Section 8).
+
+**Apple Health.** If the user turns on *Save to Apple Health* in the App's settings (part of
+Remedies Plus), the App writes the measurements the user records in its journal (such as body
+temperature, blood pressure, heart rate, blood glucose or body weight) to Apple Health on the
+device, for the types the user allows in the iOS permission prompt. The App asks only for permission
+to write; it does not read any data from Apple Health. What it writes is kept by Apple Health under
+the user's control and is not transmitted to the Developer or to any third party, nor used for
+advertising. The user can withdraw the permission at any time in the Health app or in the iOS
+Settings. A measurement deleted in the App is deleted from Apple Health too, as is one changed to a
+value outside the range a measurement can have; turning the option off or resetting the App deletes
+nothing there, and the user can delete the data in the Health app at any time.
 
 ## 5. Camera and photo library
 

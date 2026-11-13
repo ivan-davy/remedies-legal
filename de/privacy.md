@@ -68,7 +68,8 @@ Insbesondere wird die App **nicht**:
 - Software Development Kits für Analyse, Attribution, Werbung oder Absturzberichte enthalten;
 - Nutzer über Apps oder Websites hinweg verfolgen und fragt aus diesem Grund auch nicht nach der
   Erlaubnis zum Tracking;
-- auf Kontakte, Standort, Gesundheitsdaten, den Kalender oder das Mikrofon zugreifen.
+- auf Kontakte, Standort, den Kalender oder das Mikrofon zugreifen oder Daten aus Apple Health lesen
+  (was sie dort auf Wunsch des Nutzers schreiben kann, beschreibt Abschnitt 4).
 
 Die einzige Netzwerkaktivität im Zusammenhang mit der App ist:
 
@@ -93,7 +94,7 @@ wird an den Entwickler übermittelt.
 | --- | --- |
 | Einträge zu Medikamenten, Nahrungsergänzungsmitteln, Verbrauchsmaterial und Geräten: Namen, Wirkstoffe, Wirkstärken, Darreichungsformen, Mengen, Verfallsdaten, Aufbewahrungsorte, Etiketten, Notizen und die aus einer Packungsbeilage übernommenen Angaben | Verschlüsselter App-Speicher |
 | Sammlungen (die Orte, an denen Dinge aufbewahrt werden) | Verschlüsselter App-Speicher |
-| Kuren, Zeitpläne und das Journal der eingenommenen und ausgelassenen Dosen | Verschlüsselter App-Speicher |
+| Kuren, Zeitpläne sowie das Journal der eingenommenen und ausgelassenen Dosen und der Messungen, die der Nutzer erfasst (etwa Körpertemperatur oder Blutdruck) | Verschlüsselter App-Speicher |
 | Fotos von Verpackungen, vom Gegenstand selbst und von seiner Packungsbeilage oder Anleitung | Verschlüsselte Dateien im privaten Speicher der App |
 | Erinnerungseinstellungen und der Erinnerungsverlauf in der App | Verschlüsselter App-Speicher |
 | Sprache, Design und andere Einstellungen sowie die letzten Suchanfragen | Verschlüsselter App-Speicher |
@@ -123,6 +124,19 @@ Daten nach einer Wiederherstellung lesbar bleiben. Ein **unverschlüsseltes** Co
 Hardware wiederhergestellt, sind die Daten der App nicht mehr lesbar. Vor dem Wechsel auf ein neues
 Gerät sollte der Nutzer daher entweder ein verschlüsseltes Backup verwenden oder die Daten
 exportieren (siehe Abschnitt 8).
+
+**Apple Health.** Schaltet der Nutzer in den Einstellungen der App *In Health speichern* ein
+(Teil von Remedies Plus), schreibt die App die Messungen, die der Nutzer in ihrem Journal erfasst
+(etwa Körpertemperatur, Blutdruck, Herzfrequenz, Blutzucker oder Körpergewicht), auf dem Gerät in
+Apple Health, und zwar für die Datentypen, die der Nutzer in der Berechtigungsabfrage von iOS
+erlaubt. Die App bittet nur um die Erlaubnis zu schreiben; sie liest keine Daten aus Apple Health.
+Was sie schreibt, verwahrt Apple Health unter der Kontrolle des Nutzers; es wird weder an den
+Entwickler noch an Dritte übermittelt und nicht für Werbung verwendet. Der Nutzer kann die
+Erlaubnis jederzeit in der Health-App oder in den Einstellungen von iOS widerrufen. Eine in der App
+gelöschte Messung wird auch in Apple Health gelöscht, ebenso eine, die auf einen Wert außerhalb des
+Bereichs geändert wird, den eine Messung haben kann; das Ausschalten der Option oder das
+Zurücksetzen der App löscht dort nichts, und der Nutzer kann die Daten jederzeit in der Health-App
+löschen.
 
 ## 5. Kamera und Fotomediathek
 

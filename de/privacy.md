@@ -8,7 +8,7 @@ lang: de
 # Datenschutzerklärung
 
 **Gültig ab:** 16. August 2026
-**Zuletzt aktualisiert:** 13. November 2026
+**Zuletzt aktualisiert:** 14. November 2026
 
 
 Diese Übersetzung dient Ihrer Information. Maßgeblich ist die
@@ -20,13 +20,17 @@ Diese Übersetzung dient Ihrer Information. Maßgeblich ist die
 
 Die iOS-Anwendung Remedies (die „App“) erhebt keine personenbezogenen Daten.
 
-Die App hat keine Benutzerkonten und keine serverseitige Komponente. Sie stellt selbst keine
-Netzwerkverbindungen her; die einzige Netzwerkaktivität im Zusammenhang mit ihr ist der In-App-Kauf
-über Apple sowie Webseiten und E-Mails, die der Nutzer aus ihr heraus öffnet (Abschnitt 3). Sie
-enthält keine Analyse-, Werbe- oder Absturzberichtsdienste. In die App eingegebene
-Daten werden verschlüsselt auf dem Gerät des Nutzers gespeichert und weder an den Entwickler noch an
-Dritte übermittelt. Der Entwickler hat keinen Zugriff auf diese Daten und kann sie daher auch nicht
-weitergeben.
+Die App hat keine Benutzerkonten und keine serverseitige Komponente. In die App eingegebene Daten
+werden verschlüsselt auf dem Gerät des Nutzers gespeichert. Schaltet der Nutzer die
+iCloud-Synchronisierung ein (Teil von Remedies Plus, standardmäßig ausgeschaltet), bewahrt die App
+diese Daten außerdem im eigenen iCloud-Konto des Nutzers auf, auf dem Gerät verschlüsselt mit einem
+Schlüssel, den der Entwickler nicht besitzt, damit sie die anderen Geräte des Nutzers erreichen
+(Abschnitt 4). Davon abgesehen stellt die App selbst keine Netzwerkverbindungen her; die einzige
+weitere Netzwerkaktivität im Zusammenhang mit ihr ist der In-App-Kauf über Apple sowie Webseiten und
+E-Mails, die der Nutzer aus ihr heraus öffnet (Abschnitt 3). Sie enthält keine Analyse-, Werbe-
+oder Absturzberichtsdienste. Nichts, was in die App eingegeben wird, wird an den Entwickler
+übermittelt. Der Entwickler hat keinen Zugriff auf diese Daten, weder auf dem Gerät noch in iCloud,
+und kann sie daher auch nicht weitergeben.
 
 Die Website des Entwicklers, remediesapp.com (die „Website“), ist davon getrennt und wird in
 Abschnitt 12 beschrieben. Sie wird von Vercel gehostet, zählt Seitenaufrufe mit einem
@@ -45,7 +49,7 @@ Kontakt: **ivandavy@remediesapp.com**, Batumi, Georgien. Die vollständige Ansch
 ist im Impressum veröffentlicht: <https://ivan-davy.github.io/remedies-legal/impressum>.
 
 Der Entwickler verarbeitet die in die App eingegebenen personenbezogenen Daten nicht (siehe
-Abschnitt 3) und ist daher für diese Daten nicht Verantwortlicher. Verantwortlicher ist der
+Abschnitte 3 und 4) und ist daher für diese Daten nicht Verantwortlicher. Verantwortlicher ist der
 Entwickler nur für Daten, die ein Nutzer ihm direkt übermittelt, etwa den Inhalt einer
 Support-E-Mail, sowie für die über die Website verarbeiteten Daten (Abschnitt 12).
 
@@ -63,8 +67,9 @@ Der Entwickler erhebt über die App keine personenbezogenen Daten.
 Insbesondere wird die App **nicht**:
 
 - Benutzerkonten anlegen oder nach Namen, E-Mail-Adresse oder Telefonnummer fragen;
-- in die App eingegebene Daten über das Netzwerk übermitteln, weder an den Entwickler noch an
-  Dritte;
+- in die App eingegebene Daten an den Entwickler oder an Dritte übermitteln; die einzige Kopie, die
+  das Gerät verlässt, ist die verschlüsselte im eigenen iCloud-Konto des Nutzers, wenn er die
+  Synchronisierung einschaltet (Abschnitt 4);
 - Software Development Kits für Analyse, Attribution, Werbung oder Absturzberichte enthalten;
 - Nutzer über Apps oder Websites hinweg verfolgen und fragt aus diesem Grund auch nicht nach der
   Erlaubnis zum Tracking;
@@ -73,11 +78,16 @@ Insbesondere wird die App **nicht**:
 
 Die einzige Netzwerkaktivität im Zusammenhang mit der App ist:
 
+- die iCloud-Synchronisierung, solange der Nutzer sie eingeschaltet hat (Abschnitt 4): Die App
+  tauscht die verschlüsselte Kopie ihrer Daten über Apples Dienst CloudKit mit der privaten
+  Datenbank des iCloud-Kontos des Nutzers aus, und Apple meldet der App Änderungen mit stillen
+  Mitteilungen, die nie angezeigt werden;
 - der In-App-Kauf über Apple (siehe Abschnitt 9);
 - Webseiten, die der Nutzer aus der App heraus öffnet und die in Safari innerhalb der App angezeigt
   werden: diese Rechtstexte (auf GitHub Pages), die Ideen-Seite unter remedies.fider.io (betrieben
   von Fider), eine Support-Seite von Apple und die in den Registerhinweisen verlinkten offiziellen Quellen. Für jede gilt die Datenschutzerklärung der Website,
-  die sie ausliefert, und die App übermittelt ihr nichts über den Nutzer;
+  die sie ausliefert, und die App übermittelt ihr nichts über den Nutzer. Außerdem öffnet die App
+  den App Store, wenn für die weitere Synchronisierung ein Update nötig ist;
 - E-Mails, die der Nutzer aus der App heraus schreibt und die in seiner eigenen Mail-App an den
   Entwickler adressiert geöffnet werden. Eine Feedback-E-Mail ist unterhalb des Platzes für die
   Nachricht des Nutzers mit der Version der App, der iOS-Version, dem Modell des Geräts (zum
@@ -87,8 +97,9 @@ Die einzige Netzwerkaktivität im Zusammenhang mit der App ist:
 
 ## 4. Auf dem Gerät gespeicherte Daten
 
-Die unten aufgeführten Daten werden ausschließlich auf dem Gerät des Nutzers gespeichert. Keine davon
-wird an den Entwickler übermittelt.
+Die unten aufgeführten Daten werden auf dem Gerät des Nutzers gespeichert. Bei eingeschalteter
+iCloud-Synchronisierung gelangt außerdem eine Kopie dorthin, wie unter *iCloud-Synchronisierung*
+beschrieben. Keine davon wird an den Entwickler übermittelt.
 
 | Kategorie | Speicherung |
 | --- | --- |
@@ -98,12 +109,15 @@ wird an den Entwickler übermittelt.
 | Fotos von Verpackungen, vom Gegenstand selbst und von seiner Packungsbeilage oder Anleitung | Verschlüsselte Dateien im privaten Speicher der App |
 | Erinnerungseinstellungen und der Erinnerungsverlauf in der App | Verschlüsselter App-Speicher |
 | Sprache, Design und andere Einstellungen sowie die letzten Suchanfragen | Verschlüsselter App-Speicher |
+| Mit Remedies Plus die Liste, die Siri liest, um den Nutzer zu verstehen und ihm zu antworten (Namen, Wirkstoffe und Wirkstärken der Medikamente und Verbrauchsmaterialien, ihre übliche Menge und die für den Tag geplanten Uhrzeiten), und die Anfragen, die Siri für die App hinterlässt | Verschlüsselte Dateien im privaten Speicher der App, von Gerätebackups ausgenommen |
 | Ob Remedies Plus gekauft wurde (eine Kopie, damit die App offline funktioniert), und die Zahl der kostenlosen Nutzungen von Smart Scan und Ausfüllen aus dem Register in diesem Monat | Verschlüsselter App-Speicher |
 | Ein Verzeichnis von Arzneimitteln aus öffentlichen Registern (für die Vereinigten Staaten das National Drug Code Directory der FDA; für Italien die offenen Daten der italienischen Arzneimittelbehörde AIFA; für Frankreich die öffentliche Arzneimitteldatenbank Base de données publique des médicaments, BDPM; für Spanien das Verschreibungsverzeichnis (Nomenclátor de prescripción) der spanischen Arzneimittelagentur AEMPS; für die Schweiz die Open Government Data von Swissmedic; für Kanada die Drug Product Database, DPD, von Health Canada; für die Ukraine das staatliche Arzneimittelregister des Gesundheitsministeriums, DRLZ, von data.gov.ua; für Polen das Register der Arzneimittel, RPL, von dane.gov.pl; für das Vereinigte Königreich das NHS Dictionary of Medicines and Devices, dm+d, von NHS TRUD), für alle Nutzer gleich und mit der App geliefert; es enthält keine personenbezogenen Daten | Die eigenen Dateien der App |
 
 **Verschlüsselung.** Die Daten werden mit einem Schlüssel verschlüsselt, der auf dem Gerät erzeugt
 und im iOS-Schlüsselbund gespeichert wird. Die App übermittelt den Schlüssel nie, und er ist für den
-Entwickler nicht zugänglich. iOS nimmt ihn in Gerätebackups auf, wie unten beschrieben.
+Entwickler nicht zugänglich. iOS nimmt ihn in Gerätebackups auf, wie unten beschrieben. Die
+iCloud-Synchronisierung verwendet einen eigenen Schlüssel, der unter *iCloud-Synchronisierung*
+beschrieben ist.
 
 **Arbeitskopien.** Um ein Foto anzuzeigen, braucht iOS es entschlüsselt; die App hält deshalb eine
 begrenzte Zahl entschlüsselter Kopien in ihrem Cache-Verzeichnis, und das Löschen eines Eintrags
@@ -125,6 +139,26 @@ Hardware wiederhergestellt, sind die Daten der App nicht mehr lesbar. Vor dem We
 Gerät sollte der Nutzer daher entweder ein verschlüsseltes Backup verwenden oder die Daten
 exportieren (siehe Abschnitt 8).
 
+**iCloud-Synchronisierung.** Zu Remedies Plus gehört die iCloud-Synchronisierung, die
+ausgeschaltet bleibt, bis der Nutzer sie in den Einstellungen der App einschaltet. Solange sie
+eingeschaltet ist, bewahrt die App über Apples Dienst CloudKit eine Kopie der Einträge, Sammlungen,
+Kuren, Zeitpläne, des Journals, der Fotos und der Einstellungen in der privaten Datenbank des
+eigenen iCloud-Kontos des Nutzers auf und bringt sie auf seine anderen Geräte, die mit demselben
+Konto angemeldet sind. Zwei Einstellungen bleiben jedem Gerät selbst überlassen: ob Erinnerungen
+eingeschaltet sind und ob sie Namen zeigen. Jeder Eintrag wird auf dem Gerät verschlüsselt, bevor er
+gesendet wird, und zwar mit einem eigenen Schlüssel, den die App erzeugt und im
+iCloud-Schlüsselbund des Nutzers aufbewahrt, den Apple mit Ende-zu-Ende-Verschlüsselung schützt.
+Apple speichert nur die verschlüsselten Daten und kann sie nicht lesen; ebenso wenig der
+Entwickler, der keinen Zugang zum iCloud-Konto des Nutzers hat. Was keine Verschlüsselung verbergen
+kann, bleibt für Apple sichtbar: wie viele Einträge es gibt, ihre Größe, wann jeder angelegt oder
+geändert wurde und dass manche eine Datei tragen; der Name jedes Eintrags in iCloud ist ein
+nichtssagender Code. Die Kopie zählt zum iCloud-Speicher des Nutzers und wird von Apple nach den
+iCloud-Bedingungen des Nutzers verwahrt. Das Ausschalten der Synchronisierung löscht nichts.
+Einstellungen → Daten → *iCloud-Kopie löschen* löscht die Kopie in iCloud und schaltet die
+Synchronisierung auf allen Geräten aus; die Daten auf jedem Gerät bleiben erhalten. Die
+Synchronisierung endet auch, wenn sich der Nutzer von iCloud abmeldet oder Remedies Plus nicht mehr
+aktiv ist.
+
 **Apple Health.** Schaltet der Nutzer in den Einstellungen der App *In Health speichern* ein
 (Teil von Remedies Plus), schreibt die App die Messungen, die der Nutzer in ihrem Journal erfasst
 (etwa Körpertemperatur, Blutdruck, Herzfrequenz, Blutzucker oder Körpergewicht), auf dem Gerät in
@@ -139,6 +173,15 @@ Bereichs geändert wird, den eine Messung haben kann; das Ausschalten der Option
 Zurücksetzen der App löscht dort nichts, und der Nutzer kann die Daten jederzeit in der Health-App
 löschen.
 
+**Siri und Kurzbefehle.** Mit Remedies Plus kann der Nutzer eine Einnahme erfassen oder das
+Hinzufügen eines Gegenstands beginnen, indem er mit Siri spricht oder die Kurzbefehle-App
+verwendet. Damit Siri die Einträge des Nutzers erkennt, gibt die App iOS deren Namen und Wirkstoffe
+und bewahrt die in der Tabelle oben beschriebene Liste auf, die Siri liest, um zu antworten. Um auf
+diese Weise eine Einnahme zu erfassen, muss das Gerät entsperrt sein. Apple erkennt die Sprache,
+und Apples Datenschutzrichtlinie gilt für das, was der Nutzer zu Siri sagt, und dafür, wie iOS die
+übergebenen Namen verwendet. Die App erhält nur die Anfrage und sendet nichts an den Entwickler. Ohne
+Remedies Plus erhält Siri keine Namen.
+
 ## 5. Kamera und Fotomediathek
 
 Die App fragt die folgenden Berechtigungen nur an, wenn eine Funktion genutzt wird, die sie
@@ -152,13 +195,17 @@ benötigt:
 
 Ein vorhandenes Bild wird über die Fotoauswahl von iOS angehängt, die der App nur die vom Nutzer
 gewählten Bilder gibt und keine Berechtigung benötigt. Auf beide Arten erhaltene Bilder werden im
-verschlüsselten Speicher der App abgelegt und nicht hochgeladen.
+verschlüsselten Speicher der App abgelegt. Sie werden nicht hochgeladen, außer als Teil der
+verschlüsselten Kopie im iCloud-Konto des Nutzers bei eingeschalteter Synchronisierung
+(Abschnitt 4).
 
 ## 6. Smart Scan
 
 Die Texterkennung auf Verpackungen und Packungsbeilagen erfolgt **vollständig auf dem Gerät**, mit
 Apples Texterkennung und Apples Sprachmodell auf dem Gerät. Weder das Bild noch der erkannte Text
-verlässt das Gerät, und keines von beiden wird an den Entwickler oder an Dritte gesendet.
+wird zum Lesen irgendwohin gesendet, und keines von beiden wird an den Entwickler oder an Dritte
+gesendet. Ein Foto, das der Nutzer bei einem Eintrag behält, wird wie jedes andere gespeichert
+(Abschnitte 4 und 5).
 
 **Ausfüllen aus dem Register.** Die App durchsucht das mit ihr gelieferte Arzneimittelregister
 (Abschnitt 4) auf dem Gerät und übernimmt das vom Nutzer gewählte Produkt in den neu angelegten
@@ -167,14 +214,16 @@ gesendet.
 
 ## 7. Erinnerungen
 
-Erinnerungen werden von iOS lokal geplant. Die App verwendet keinen Server für Push-Mitteilungen und
-hat keine Möglichkeit, Mitteilungen von außerhalb des Geräts zu senden. Welche Inhalte einer
+Erinnerungen werden von iOS lokal geplant. Die App verwendet keinen Server für Push-Mitteilungen,
+und keine Erinnerung wird von außerhalb des Geräts gesendet. Die einzigen Mitteilungen, die das
+Gerät von außen erreichen, sind die stillen, mit denen iCloud bei eingeschalteter Synchronisierung
+eine Änderung meldet, und sie werden nie angezeigt. Welche Inhalte einer
 Erinnerung auf dem Sperrbildschirm erscheinen, legt der Nutzer fest; standardmäßig enthält eine
 Erinnerung den Namen des Medikaments **nicht**: Sie sagt nur, welche Art von Eintrag betroffen ist (ein
 Medikament, ein Verbrauchsmaterial, eine Messung, ein Gerät), was geschieht (es ist Zeit, etwas wurde
 nicht erfasst, ein Datum ist nah oder überschritten, der Vorrat wird knapp oder ist aufgebraucht) und
 wie viele. Wählt der Nutzer, Namen anzuzeigen, zeigt eine Erinnerung außerdem den Namen und die
-Wirkstärke des Eintrags und die geplante Uhrzeit; was der Nutzer beim Zeitplan gespeichert hat (die
+Wirkstärke des Eintrags oder die geplante Messung und die geplante Uhrzeit; was der Nutzer beim Zeitplan gespeichert hat (die
 Menge, die Art der Einnahme, was dafür benötigt wird, die Notiz), bleibt in der App. Eine Erinnerung
 enthält kein Foto.
 
@@ -190,15 +239,19 @@ direkt in der App ausgeübt:
   Sorgfalt behandelt werden wie die darin enthaltenen Daten und an einem privaten Ort aufbewahrt
   werden. Die App sendet das Archiv nirgendwohin; wohin es geht, bestimmt der Nutzer. Einstellungen
   → Daten → *Aus einem Backup wiederherstellen* stellt ein Archiv wieder her und ersetzt dabei die
-  aktuell in der App vorhandenen Daten.
+  aktuell in der App vorhandenen Daten, bei eingeschalteter iCloud-Synchronisierung auf allen
+  Geräten des Nutzers.
 - **Löschung.** Einstellungen → Zurücksetzen → *App zurücksetzen* löscht alles, was die App auf dem
   Gerät speichert: die Einträge, Fotos, Kuren, das Journal, die Sammlungen, die Einstellungen und
   die Arbeitskopien in ihrem Cache. Zwei Dinge bleiben erhalten: der Kauf von Remedies Plus, den
   Apple verwaltet, und die Zahl der kostenlosen Nutzungen von Smart Scan und Ausfüllen aus dem Register
   in diesem Monat, damit ein Zurücksetzen sie nicht zurückbringt. Auch das Löschen der App entfernt ihre Daten vom
   Gerät. In beiden Fällen bleibt der Verschlüsselungsschlüssel im iOS-Schlüsselbund, wo er nichts
-  mehr entschlüsseln kann, sobald die Daten gelöscht sind. Der Entwickler besitzt keine Kopie. Kopien in Gerätebackups oder exportierten
-  Archiven bleiben unter der Kontrolle des Nutzers.
+  mehr entschlüsseln kann, sobald die Daten gelöscht sind. Bei eingeschalteter
+  iCloud-Synchronisierung schaltet ein Zurücksetzen die Synchronisierung auf diesem Gerät aus und
+  lässt die Kopie in iCloud bestehen, die Einstellungen → Daten → *iCloud-Kopie löschen* löscht
+  (Abschnitt 4). Der Entwickler besitzt keine Kopie. Kopien in iCloud, in Gerätebackups oder in
+  exportierten Archiven bleiben unter der Kontrolle des Nutzers.
 - **Berichtigung.** Jeder Eintrag kann in der App bearbeitet werden. Die Fotos gelöschter Einträge
   werden beim nächsten Start der App gelöscht, sofern sie dann überhaupt Einträge enthält; bis dahin
   bleiben sie erhalten, damit das Löschen rückgängig gemacht werden kann.
@@ -215,8 +268,14 @@ beschriebenen Daten.
 ## 9. Weitergabe an Dritte
 
 Der Entwickler verkauft, vermietet oder gibt Nutzerdaten auf andere Weise nicht weiter, da er sie
-nicht besitzt. An der App sind keine Auftragsverarbeiter, Werbeanbieter oder Analyseanbieter
-beteiligt. Die von der Website eingesetzten Auftragsverarbeiter sind in Abschnitt 12 genannt.
+nicht besitzt. An der App sind weder Auftragsverarbeiter des Entwicklers noch Werbe- oder
+Analyseanbieter beteiligt. Die von der Website eingesetzten Auftragsverarbeiter sind in Abschnitt 12
+genannt.
+
+Die App nutzt Dienste von Apple, wenn der Nutzer sie wählt: iCloud für die Synchronisierung, Apple
+Health, Siri (Abschnitt 4) und den App Store. Jeden davon stellt Apple dem Nutzer nach Apples
+eigenen Bedingungen und Apples Datenschutzrichtlinie bereit, und was die App in iCloud aufbewahrt,
+ist so verschlüsselt, dass Apple es nicht lesen kann.
 
 Käufe von Remedies Plus werden von **Apple** abgewickelt. Die App bestätigt einen Kauf auf dem
 Gerät bei Apple. Der Entwickler erhält von Apple nur die Verkaufsberichte, die Apple jedem
@@ -231,8 +290,9 @@ Informationen darin werden von der erwachsenen Person eingegeben, die die App nu
 
 ## 11. Sicherheit
 
-Die von der App gespeicherten Daten sind im Ruhezustand verschlüsselt, und die App stellt selbst
-keine Netzwerkverbindungen her. Die App läuft in der App-Sandbox von iOS, die verhindert, dass
+Die von der App gespeicherten Daten sind im Ruhezustand verschlüsselt, und die Kopie in iCloud bei
+eingeschalteter Synchronisierung ist Ende-zu-Ende-verschlüsselt (Abschnitt 4); abgesehen von dieser
+Kopie stellt die App selbst keine Netzwerkverbindungen her. Die App läuft in der App-Sandbox von iOS, die verhindert, dass
 andere Apps ihre Dateien lesen. Es verbleiben die Risiken, die alle auf einem Telefon gespeicherten
 Daten betreffen, insbesondere die Nutzung eines entsperrten Geräts durch eine andere Person und
 unverschlüsselte Computer-Backups (siehe Abschnitt 4).
@@ -298,8 +358,8 @@ Kinder.
 
 ## 13. Änderungen dieser Datenschutzerklärung
 
-Sollte die App beginnen, Daten zu erheben, etwa wenn eine optionale Cloud-Synchronisierung
-eingeführt wird, wird diese Datenschutzerklärung **vor** der Veröffentlichung dieser App-Version
+Sollte die App beginnen, Daten zu erheben oder Daten anders als oben beschrieben zu senden, wird
+diese Datenschutzerklärung **vor** der Veröffentlichung dieser App-Version
 aktualisiert, und die Änderung wird in der App angezeigt. Sollte die Website beginnen, andere als die
 in Abschnitt 12 beschriebenen Daten zu erheben oder einen anderen Dienst für deren Verarbeitung
 einzusetzen, wird diese Datenschutzerklärung aktualisiert, bevor die Änderung wirksam wird. Das

@@ -8,7 +8,7 @@ lang: en
 # Terms of Use
 
 **Effective date:** 16 August 2026
-**Last updated:** 12 November 2026
+**Last updated:** 14 November 2026
 
 
 ---
@@ -74,8 +74,8 @@ acknowledged before the App can be used.
 ## 3. User content
 
 You retain all rights in the content you enter into the App. That content is stored on your device
-and is not transmitted to the Developer; the Developer claims no licence over it and has no means
-of exercising one. You are responsible for the content you enter and for checking it against the
+and, if you turn on iCloud sync, encrypted in your own iCloud account; it is not transmitted to the
+Developer. The Developer claims no licence over it and has no means of exercising one. You are responsible for the content you enter and for checking it against the
 physical packaging.
 
 ## 4. Remedies Plus
@@ -91,6 +91,8 @@ Certain features are available only as part of a paid upgrade, Remedies Plus.
 - A purchase can be restored on a new device at any time, without restriction.
 - The Developer may change the features included in the free version for **future** purchasers.
   Features already purchased remain available to the purchaser.
+- If a purchase is refunded, the features of Remedies Plus stop, iCloud sync among them. Nothing
+  you have entered is removed.
 
 ## 5. Acceptable use
 
@@ -99,9 +101,11 @@ represent it as a medical device or as a source of medical advice.
 
 ## 6. Availability
 
-The App operates entirely on the user's device and does not depend on any service operated by the
-Developer. The Developer may cease to publish updates, and future versions of iOS may not support
-the App. Data remains on the device and can be exported at any time (Settings → Data).
+The App operates on the user's device and does not depend on any service operated by the
+Developer. iCloud sync, Apple Health, Siri and purchases rely on services Apple provides under its
+own terms, whose availability the Developer does not control. The Developer may cease to publish
+updates, and future versions of iOS may not support the App. Data remains on the device and can be
+exported at any time (Settings → Data).
 
 ## 7. Warranties
 

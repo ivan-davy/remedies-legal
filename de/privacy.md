@@ -155,10 +155,12 @@ gesendet.
 Erinnerungen werden von iOS lokal geplant. Die App verwendet keinen Server für Push-Mitteilungen und
 hat keine Möglichkeit, Mitteilungen von außerhalb des Geräts zu senden. Welche Inhalte einer
 Erinnerung auf dem Sperrbildschirm erscheinen, legt der Nutzer fest; standardmäßig enthält eine
-Erinnerung den Namen des Medikaments **nicht** und auch sonst nichts darüber. Wählt der Nutzer, Namen
-anzuzeigen, zeigt eine Erinnerung außerdem, was der Nutzer beim Zeitplan gespeichert hat: die Menge, die
-Uhrzeit, die Art der Einnahme und was dafür benötigt wird; die Notiz zum Zeitplan erscheint erst, wenn
-die Erinnerung vollständig geöffnet wird. Eine Erinnerung enthält kein Foto.
+Erinnerung den Namen des Medikaments **nicht**: Sie sagt nur, dass etwas einer Art (ein Medikament, ein
+Verbrauchsmaterial, eine Messung, ein Gerät) fällig ist, und wie viele. Wählt der Nutzer, Namen
+anzuzeigen, zeigt eine Erinnerung außerdem den Namen und die Wirkstärke des Eintrags und was der Nutzer
+beim Zeitplan gespeichert hat: die Menge, die Uhrzeit, die Art der Einnahme und was dafür benötigt
+wird; die Notiz zum Zeitplan erscheint erst, wenn die Erinnerung vollständig geöffnet wird. Eine
+Erinnerung enthält kein Foto.
 
 ## 8. Rechte der betroffenen Personen
 

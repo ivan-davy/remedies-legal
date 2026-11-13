@@ -133,7 +133,8 @@ erlaubt. Die App bittet nur um die Erlaubnis zu schreiben; sie liest keine Daten
 Was sie schreibt, verwahrt Apple Health unter der Kontrolle des Nutzers; es wird weder an den
 Entwickler noch an Dritte übermittelt und nicht für Werbung verwendet. Der Nutzer kann die
 Erlaubnis jederzeit in der Health-App oder in den Einstellungen von iOS widerrufen. Eine in der App
-gelöschte Messung wird auch in Apple Health gelöscht, ebenso eine, die auf einen Wert außerhalb des
+gelöschte Messung wird auch in Apple Health gelöscht (ist die Option zu diesem Zeitpunkt
+ausgeschaltet, sobald sie wieder eingeschaltet wird), ebenso eine, die auf einen Wert außerhalb des
 Bereichs geändert wird, den eine Messung haben kann; das Ausschalten der Option oder das
 Zurücksetzen der App löscht dort nichts, und der Nutzer kann die Daten jederzeit in der Health-App
 löschen.
@@ -169,12 +170,13 @@ gesendet.
 Erinnerungen werden von iOS lokal geplant. Die App verwendet keinen Server für Push-Mitteilungen und
 hat keine Möglichkeit, Mitteilungen von außerhalb des Geräts zu senden. Welche Inhalte einer
 Erinnerung auf dem Sperrbildschirm erscheinen, legt der Nutzer fest; standardmäßig enthält eine
-Erinnerung den Namen des Medikaments **nicht**: Sie sagt nur, dass etwas einer Art (ein Medikament, ein
-Verbrauchsmaterial, eine Messung, ein Gerät) fällig ist, und wie viele. Wählt der Nutzer, Namen
-anzuzeigen, zeigt eine Erinnerung außerdem den Namen und die Wirkstärke des Eintrags und was der Nutzer
-beim Zeitplan gespeichert hat: die Menge, die Uhrzeit, die Art der Einnahme und was dafür benötigt
-wird; die Notiz zum Zeitplan erscheint erst, wenn die Erinnerung vollständig geöffnet wird. Eine
-Erinnerung enthält kein Foto.
+Erinnerung den Namen des Medikaments **nicht**: Sie sagt nur, welche Art von Eintrag betroffen ist (ein
+Medikament, ein Verbrauchsmaterial, eine Messung, ein Gerät), was geschieht (es ist Zeit, etwas wurde
+nicht erfasst, ein Datum ist nah oder überschritten, der Vorrat wird knapp oder ist aufgebraucht) und
+wie viele. Wählt der Nutzer, Namen anzuzeigen, zeigt eine Erinnerung außerdem den Namen und die
+Wirkstärke des Eintrags und die geplante Uhrzeit; was der Nutzer beim Zeitplan gespeichert hat (die
+Menge, die Art der Einnahme, was dafür benötigt wird, die Notiz), bleibt in der App. Eine Erinnerung
+enthält kein Foto.
 
 ## 8. Rechte der betroffenen Personen
 

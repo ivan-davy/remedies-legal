@@ -122,8 +122,9 @@ device, for the types the user allows in the iOS permission prompt. The App asks
 to write; it does not read any data from Apple Health. What it writes is kept by Apple Health under
 the user's control and is not transmitted to the Developer or to any third party, nor used for
 advertising. The user can withdraw the permission at any time in the Health app or in the iOS
-Settings. A measurement deleted in the App is deleted from Apple Health too, as is one changed to a
-value outside the range a measurement can have; turning the option off or resetting the App deletes
+Settings. A measurement deleted in the App is deleted from Apple Health too (if the option is off at
+the time, when it is next turned on), as is one changed to a value outside the range a measurement
+can have; turning the option off or resetting the App deletes
 nothing there, and the user can delete the data in the Health app at any time.
 
 ## 5. Camera and photo library
@@ -154,10 +155,11 @@ product chosen are not sent to the Developer or to any third party.
 Reminders are scheduled locally by iOS. The App does not use a push-notification server and has no
 means of sending notifications from outside the device. The content of reminders shown on the lock
 screen is set by the user; by default, a reminder does **not** include the name of the medicine: it
-says only that something of one kind (a medicine, a supply, a measurement, equipment) is due, and how
-many. When the user chooses to show names, a reminder also shows the record's name and strength and
-what the user saved with the schedule: the amount, the time, how it is taken and what it needs; the
-schedule's note appears only when the reminder is opened in full. A reminder carries no photograph.
+says only what kind of record it is about (a medicine, a supply, a measurement, equipment), what is
+happening (it is time, it has not been logged, a date is near or has passed, stock is running low or
+has run out) and how many. When the user chooses to show names, a reminder also shows the record's
+name and strength and the time it is planned for; what the user saved with the schedule (the amount,
+how it is taken, what it needs, the note) stays in the App. A reminder carries no photograph.
 
 ## 8. Data subject rights
 
